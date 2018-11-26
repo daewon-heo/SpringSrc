@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="com.kh.jsp.member.model.vo.Member"%>
-<%
-	Member m = (Member)session.getAttribute("member");
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var="m" value="${sessionScope.member}" scope="session"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +80,7 @@
 	<h1 align="center">Welcome JSP World</h1>
 	
 	<div class="loginArea">
-	<%if ( m == null ) { %>
+	<c:if test="${ empty m }">
 		<form id="loginForm" action="/myWeb/login.me" method="post">
 			<table>
 				<tr>
@@ -106,16 +106,17 @@
 			</div>
 			
 		</form>
-		<% } else { %>
+		</c:if>
+		<c:if test="${ !empty m}">
 		<div id="userInfo">
-			<label><%= m.getUserName() %>님의 방문을 환영합니다.</label>
+			<label>${m.getUserName() }님의 방문을 환영합니다.</label>
 			<div class="btns" align="right">
 				<div id="changeInfo" onclick="changeInfo()">정보수정</div>
 				<div id="logoutBtn" onclick='logout()'>로그아웃</div> 
 			</div>
 			
 		</div>
-	<% } %>
+		</c:if>
 	</div>
 	<script>
 		function login(){

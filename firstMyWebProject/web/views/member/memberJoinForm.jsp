@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" errorPage="/views/common/errorPage.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="<%=request.getContextPath()%>/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${requestScope.request.getContextPath()}/resources/js/jquery-3.3.1.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <title>회원 가입 양식</title>
 <style>
@@ -41,13 +42,14 @@
 </style>
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
+
+	<c:import url="../common/header.jsp"/>
 	
 	<div class="outer">
 		<br>
 		<h2 align="center">회원가입</h2>
 		
-		<form id="joinForm" action="<%=request.getContextPath()%>/mInsert.me" method="post">
+		<form id="joinForm" action="${requestScope.request.getContextPath()}/mInsert.me" method="post">
 			
 			<table align="center">
 				<tr>
@@ -227,7 +229,7 @@
 				
 			</script>
 	</div>
-	<%@ include file="../common/footer.jsp" %>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>
 

@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
     <%-- errorPage="/views/common/errorPage.jsp" --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="<%=request.getContextPath()%>/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${requestScope.request.getContextPath() }/resources/js/jquery-3.3.1.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <title>회원 정보 수정</title>
 <style>
@@ -43,7 +44,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../common/header.jsp" %>
+	<c:import url="../common/header.jsp"/>
 	<div class="outer">
 		<br>
 		<h2 align="center">회원 정보 수정</h2>
@@ -53,7 +54,7 @@
 			<table align="center">
 				<tr>
 					<td width="200px">* 아이디 </td>
-					<td style="color:white; text-align: left; padding-left: 20px;"><%= m.getUserId() %></td>
+					<td style="color:white; text-align: left; padding-left: 20px;">${ m.getUserId()}</td>
 					<td width="200px"></td>
 				</tr>
 				<tr>
@@ -68,7 +69,7 @@
 				</tr>
 				<tr>
 					<td>* 이름</td>
-					<td style="color:white; text-align: left; padding-left: 20px;"><%= m.getUserName() %></td>
+					<td style="color:white; text-align: left; padding-left: 20px;">${m.getUserName()}</td>
 					<td></td>
 				</tr>
 				<tr>
@@ -81,7 +82,7 @@
 				</tr>
 				<tr>
 					<td>나이 </td>
-					<td><input type="number" name="age" min="10" max="100" value="<%= m.getAge() %>"
+					<td><input type="number" name="age" min="10" max="100" value="${m.getAge() }"
 					      style="width:140px;">&nbsp;세
 					</td>
 					<td></td>
@@ -97,7 +98,7 @@
 				</tr>
 				<tr>
 					<td>이메일 </td>
-					<td><input type="email" name="email" value="<%= m.getEmail() %>"></td>
+					<td><input type="email" name="email" value="${m.getEmail()}"></td>
 					<td></td>
 				</tr>
 				<tr>
@@ -144,25 +145,25 @@
 			<script>
 				$(function(){
 					$('input:radio').each(function(){
-						if( $(this).val() == '<%=m.getGender()%>')
+						if( $(this).val() == '${m.getGender()}')
 						  $(this).prop('checked', true);
 						else 
 						  $(this).prop('checked', false);
 					});
 					
-					var phoneArr = '<%= m.getPhone() %>'.split('-');
+					var phoneArr = '${m.getPhone()}'.split('-');
 				
 					$('input[name*="tel"]').each(function(index){
 						$(this).val(phoneArr[index]);
 					});
 					
-					var addressArr = '<%= m.getAddress() %>'.split(', ');
+					var addressArr = '${m.getAddress()}'.split(', ');
 					
 					$('#zipCode').val(addressArr[0]);
 					$('#address1').val(addressArr[1]);
 					$('#address2').val(addressArr[2]);
 					
-					var hobbyArr = '<%= m.getHobby() %>'.split(', ');
+					var hobbyArr = '${m.getHobby()}'.split(', ');
 					// console.log(hobbyArr);
 					$('input:checkbox').each(function(){
 						if($.inArray($(this).val(),hobbyArr) > -1)
@@ -175,7 +176,7 @@
 				}
 				
 				function deleteMember() {
-					location.href = "/myWeb/mDelete.me?mid=<%=m.getUserId()%>";
+					location.href = "/myWeb/mDelete.me?mid=${m.getUserId()}";
 				}
 				
 				// 참조 API : http://postcode.map.daum.net/guide
@@ -228,6 +229,6 @@
 				
 			</script>
 	</div>
-	<%@ include file="../common/footer.jsp" %>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>
