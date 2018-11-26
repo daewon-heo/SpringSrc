@@ -40,6 +40,6 @@
 	<h3>영역 설정 없이 호출한 경우 - 1 - : ${ request }</h3>
 	<h3>영역 설정 없이 호출한 경우 - 2 - : ${ session }</h3>
 	
-
+	<a href="/jstl/index.html">처음 화면으로...</a>
 </body>
 </html>
