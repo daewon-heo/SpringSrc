@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,13 +32,13 @@
 </style>
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
-	<% if(m != null && m.getUserId().equals("admin")) { %>
+	<c:import url="../common/header.jsp"/>
+	<c:if test="${ !empty member && member.userId eq 'admin' }">
 	<div class="outer">
 		<br>
 		<h2 align="center">공지 사항 작성</h2>
 		<div class="tableArea">
-			<form action="<%= request.getContextPath() %>/nInsert.no" method="post">
+			<form action="${pageContext.request.contextPath}/nInsert.no" method="post">
 				<table>
 					<tr>
 						<td>제목 </td>
@@ -44,8 +47,8 @@
 					<tr>
 						<td>작성자 </td>
 						<td>
-							<input type="text" value="<%= m.getUserName() %>" name="writer" readonly>
-							<input type="hidden" value="<%= m.getUserId() %>" name="userId">
+							<input type="text" value="${member.userName}" name="writer" readonly>
+							<input type="hidden" value="${member.userId}" name="userId">
 						</td>
 						<td>작성일</td>
 						<td><input type="date" name="date"></td>
@@ -69,10 +72,11 @@
 			
 		</div>
 	</div>
-	<% } else {
-		request.setAttribute("msg", "관계자 외에 접근이 불가능한 페이지입니다.");
-		request.getRequestDispatcher("view/common/errorPage.jsp").forward(request, response);
-	} %>
-	<%@ include file="../common/footer.jsp" %>
+	</c:if>
+	<c:if test="${ empty member }">
+		<c:set var="msg" value="관계자 외에 접근이 불가능한 페이지입니다." scope="session"/>
+		<c:redirect url="views/common/errorPage.jsp"/>
+	</c:if>
+	<c:import url="../common/footer.jsp"></c:import>
 </body>
 </html>

@@ -54,7 +54,7 @@
 			<table align="center">
 				<tr>
 					<td width="200px">* 아이디 </td>
-					<td style="color:white; text-align: left; padding-left: 20px;">${ m.getUserId()}</td>
+					<td style="color:white; text-align: left; padding-left: 20px;">${ member.userId }</td>
 					<td width="200px"></td>
 				</tr>
 				<tr>
@@ -69,7 +69,7 @@
 				</tr>
 				<tr>
 					<td>* 이름</td>
-					<td style="color:white; text-align: left; padding-left: 20px;">${m.getUserName()}</td>
+					<td style="color:white; text-align: left; padding-left: 20px;">${ member.userName }</td>
 					<td></td>
 				</tr>
 				<tr>
@@ -82,7 +82,7 @@
 				</tr>
 				<tr>
 					<td>나이 </td>
-					<td><input type="number" name="age" min="10" max="100" value="${m.getAge() }"
+					<td><input type="number" name="age" min="10" max="100" value="${member.age }"
 					      style="width:140px;">&nbsp;세
 					</td>
 					<td></td>
@@ -98,7 +98,7 @@
 				</tr>
 				<tr>
 					<td>이메일 </td>
-					<td><input type="email" name="email" value="${m.getEmail()}"></td>
+					<td><input type="email" name="email" value="${ member.email }"></td>
 					<td></td>
 				</tr>
 				<tr>
@@ -145,25 +145,25 @@
 			<script>
 				$(function(){
 					$('input:radio').each(function(){
-						if( $(this).val() == '${m.getGender()}')
+						if( $(this).val() == '${member.gender}')
 						  $(this).prop('checked', true);
 						else 
 						  $(this).prop('checked', false);
 					});
 					
-					var phoneArr = '${m.getPhone()}'.split('-');
+					var phoneArr = '${member.phone}'.split('-');
 				
 					$('input[name*="tel"]').each(function(index){
 						$(this).val(phoneArr[index]);
 					});
 					
-					var addressArr = '${m.getAddress()}'.split(', ');
+					var addressArr = '${member.address}'.split(', ');
 					
 					$('#zipCode').val(addressArr[0]);
 					$('#address1').val(addressArr[1]);
 					$('#address2').val(addressArr[2]);
 					
-					var hobbyArr = '${m.getHobby()}'.split(', ');
+					var hobbyArr = '${member.hobby}'.split(', ');
 					// console.log(hobbyArr);
 					$('input:checkbox').each(function(){
 						if($.inArray($(this).val(),hobbyArr) > -1)
@@ -176,7 +176,7 @@
 				}
 				
 				function deleteMember() {
-					location.href = "/myWeb/mDelete.me?mid=${m.getUserId()}";
+					location.href = "/myWeb/mDelete.me?mid=${member.userId}";
 				}
 				
 				// 참조 API : http://postcode.map.daum.net/guide

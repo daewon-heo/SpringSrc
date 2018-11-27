@@ -2,7 +2,6 @@
     pageEncoding="UTF-8" import="com.kh.jsp.member.model.vo.Member"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<c:set var="m" value="${sessionScope.member}" scope="session"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +79,7 @@
 	<h1 align="center">Welcome JSP World</h1>
 	
 	<div class="loginArea">
-	<c:if test="${ empty m }">
+	<c:if test="${ empty member}">
 		<form id="loginForm" action="/myWeb/login.me" method="post">
 			<table>
 				<tr>
@@ -107,9 +106,9 @@
 			
 		</form>
 		</c:if>
-		<c:if test="${ !empty m}">
+		<c:if test="${ !empty member}">
 		<div id="userInfo">
-			<label>${m.getUserName() }님의 방문을 환영합니다.</label>
+			<label>${ member.userName }님의 방문을 환영합니다.</label>
 			<div class="btns" align="right">
 				<div id="changeInfo" onclick="changeInfo()">정보수정</div>
 				<div id="logoutBtn" onclick='logout()'>로그아웃</div> 

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.kh.jsp.notice.model.vo.*"%>
-<% Notice n = (Notice)request.getAttribute("notice"); %>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,8 +31,8 @@
 <title>공지 사항 수정</title>
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
-	<% if(m != null && m.getUserId().equals("admin")){ %>
+	<c:import url="../common/header.jsp"></c:import>
+	<c:if test="${!empty member && member.userId eq 'admin'}">
 	<div class="outer">
 		<br>
 		<h2 align="center">공지 사항 수정</h2>
@@ -41,24 +43,24 @@
 						<td>제목 </td>
 						<td colspan="3">
 							<input type="text" size="50" name="title" 
-							       value="<%= n.getNtitle().replace("\"", "&#34;") %>">
-							<input type="hidden" name="nno" value="<%= n.getNno() %>">
+							       value="${fn:replace(notice.ntitle, '\"', '&#34;')}">
+							<input type="hidden" name="nno" value="${notice.nno}">
 						</td>
 					</tr>
 					<tr>
 						<td>작성자 </td>
 						<td>
-							<input type="text" value="<%= n.getNwriter() %>" name="writer" readonly>
+							<input type="text" value="${notice.nwriter}" name="writer" readonly>
 						</td>
 						<td>작성일</td>
-						<td><input type="date" name="date" value="<%= n.getNdate() %>"></td>
+						<td><input type="date" name="date" value="${notice.ndate}"></td>
 					</tr>
 					<tr>
 						<td>내용 </td>
 					</tr>
 					<tr>
 						<td colspan="4">
-							<textarea name="content" cols="60" rows="15" style="resize:none;"><%= n.getNcontent() %></textarea>
+							<textarea name="content" cols="60" rows="15" style="resize:none;">${ notice.ncontent}</textarea>
 						</td>
 					</tr>
 				</table>
@@ -69,13 +71,13 @@
 				</div>
 				<script>
 					function complete(){
-						$("#updateForm").attr("action","<%=request.getContextPath() %>/nUpdate.no");
+						$("#updateForm").attr("action","${pageContext.request.contextPath}/nUpdate.no");
 						
 					}
 					
 					function deleteNotice(){
 						// delete 는 예약어 이므로 deleteNotice 로 ...!
-						$("#updateForm").attr("action","<%=request.getContextPath() %>/nDelete.no");
+						$("#updateForm").attr("action","${pageContext.request.contextPath}/nDelete.no");
 					}
 				
 				</script>
@@ -83,10 +85,11 @@
 			
 		</div>
 	</div>
-	<% } else {
-		request.setAttribute("msg", "관계자 외에 접근이 불가능한 페이지입니다.");
-		request.getRequestDispatcher("view/common/errorPage.jsp").forward(request, response);
-	 } %>
-	<%@ include file="../common/footer.jsp" %>
+	</c:if>
+	<c:if test="${ empty member }">
+		<c:set var="msg" value="관계자 외에 접근이 불가능한 페이지입니다." scope="session"/>
+		<c:redirect url="views/common/errorPage.jsp"/>
+	</c:if>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

@@ -1,14 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*, com.kh.jsp.notice.model.vo.*"%>
-
-<% ArrayList<Notice> list = (ArrayList<Notice>)request.getAttribute("list"); %>
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>공지사항 목록표</title>
-<script src="<%= request.getContextPath() %>/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.3.1.min.js"></script>
 
 <style>
 	.outer{
@@ -38,7 +37,7 @@
 </style>
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
+	<c:import url="../common/header.jsp"/>
 	<div class="outer">
 		<br>
 		<h2 align="center">공지사항</h2>
@@ -51,18 +50,20 @@
 				<th>조회수</th>
 				<th width="100px">작성일</th>
 			</tr>
-			<% for(Notice n : list){ %>
+			<c:forEach var="n" items="${list}">
 			<tr>
-				<td><%= n.getNno() %></td>
-				<td><%= n.getNtitle() %></td>
-				<td><%= n.getNwriter() %></td>
-				<td><%= n.getNcount() %></td>
-				<td><%= n.getNdate() %></td>
+				<td>${n.nno }</td>
+				<td>${n.ntitle }</td>
+				<td>${n.nwriter }</td>
+				<td>${n.ncount }</td>
+				<td>${n.ndate }</td>
 			</tr>
-			<% } %>
+			</c:forEach>
 		</table>
 		</div>
-		<div class="searchArea" align="center">
+		
+	</div>
+	<div class="searchArea" align="center">
 			<select id="searchCondition" name="searchCondition">
 				<option value="">---</option>
 				<option value="writer">작성자</option>
@@ -71,11 +72,10 @@
 			</select>
 			<input type="search" id="keyword" placeholder="키워드를 입력하세요!"> 
 			<button type="button" onclick="search();">검색하기</button>
-			<% if(m != null && m.getUserId().equals("admin")){ %>
-				<button onclick="location.href='views/notice/noticeInsertForm.jsp'">작성하기</button>
-			<% } %>
+			<c:if test="${!empty member && member.userId eq 'admin'}">
+			 	<button onclick="location.href='views/notice/noticeInsertForm.jsp'">작성하기</button>
+			</c:if>
 		</div>
-	</div>
 	<script>  
 		$(function(){
 			
@@ -86,15 +86,15 @@
 			}).click(function(){
 				//console.log($(this).parent().children().eq(0).text());
 				var nno = $(this).parent().children().eq(0).text();
-				location.href="<%=request.getContextPath()%>/selectOne.no?nno=" + nno;
+				location.href="${pageContext.request.contextPath}/selectOne.no?nno=" + nno;
 			});
 		});
 		
 		function search(){
-			location.href="<%=request.getContextPath()%>/searchNotice.no?con="+$('#searchCondition').val()+"&keyword="+$('#keyword').val();
+			location.href="${pageContext.request.contextPath}/searchNotice.no?con="+$('#searchCondition').val()+"&keyword="+$('#keyword').val();
 		}
 		
 	</script>
-	<%@ include file="../common/footer.jsp" %>
+	<c:import url="../common/footer.jsp"></c:import>
 </body>
 </html>
