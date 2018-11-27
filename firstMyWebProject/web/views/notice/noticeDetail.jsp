@@ -81,6 +81,6 @@
 				</div>
 		</div>
 	</div>
-	<%@ include file="../common/footer.jsp" %>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

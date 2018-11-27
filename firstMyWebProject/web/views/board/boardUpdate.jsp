@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.kh.jsp.board.model.vo.*"%>
- <% Board b = (Board)request.getAttribute("board"); %>
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +39,7 @@
 <title>게시글 수정 페이지</title>
 </head>
 <body>
-<%@ include file="../common/header.jsp" %>
+<c:import url="../common/header.jsp"/>
 	<div class="outer">
 		<br>
 		<h2 align="center">게시글 수정 페이지</h2>
@@ -47,23 +49,23 @@
 					<tr>
 						<td>제목 </td>
 						<td colspan="3">
-							<input type="text" size="65" name="title" value="<%=b.getBtitle() %>">
-							<input type="hidden" name="bno" value="<%=b.getBid()%>">
+							<input type="text" size="65" name="title" value="${board.btitle}">
+							<input type="hidden" name="bno" value="${board.bid}">
 						</td>
 					</tr>
 					<tr>
 						<td>작성자 </td>
-						<td colspan="3"><%= b.getBwriter() %></td>
+						<td colspan="3">${board.bwriter}</td>
 					</tr>
-					<% if(b.getBoardfile() != null){ %>
+					<c:if test="${ !empty board.boardfile }">
 					<tr>
 						<td>기존 파일 </td>
 						<td colspan="3">
-							<a href="/myWeb/bfdown.bo?path=<%=b.getBoardfile()%>">
-							<%=b.getBoardfile()%></a>	
+							<a href="/myWeb/bfdown.bo?path=${board.boardfile}">
+							${board.boardfile}</a>	
 						</td>
 					</tr>
-					<% } %>
+					</c:if>
 					<tr>
 						<td>새 파일 </td>
 						<td colspan="3">
@@ -73,7 +75,7 @@
 					<tr>
 						<td>내용 </td>
 						<td colspan="3">
-							<textarea name="content" cols="67" rows="15" style="resize:none;"><%=b.getBcontent() %></textarea>
+							<textarea name="content" cols="67" rows="15" style="resize:none;">${board.bcontent}</textarea>
 						</td>
 					</tr>
 				</table>
@@ -84,17 +86,17 @@
 				</div>
 				<script>
 					function complete(){
-						$("#updateForm").attr("action","<%= request.getContextPath()%>/bUpdate.bo");
+						$("#updateForm").attr("action","${pageContext.request.contextPath}/bUpdate.bo");
 					}
 					
 					function deleteBoard(){
-						$("#updateForm").attr("action","<%= request.getContextPath()%>/bDelete.bo");
+						$("#updateForm").attr("action","${pageContext.request.contextPath}/bDelete.bo");
 					}
 				
 				</script>
 			</form>
 	</div>
 	</div>
-	<%@ include file="../common/footer.jsp" %>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

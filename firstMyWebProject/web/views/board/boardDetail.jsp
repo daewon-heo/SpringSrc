@@ -1,11 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.kh.jsp.board.model.vo.*, java.util.*, com.kh.jsp.boardComment.model.vo.*"%>
-<%
-	Board b = (Board)request.getAttribute("board");
-
-// 댓글 리스트
-	ArrayList<BoardComment> clist = (ArrayList<BoardComment>) request.getAttribute("clist"); 
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,8 +64,8 @@
 <title>게시글 상세보기</title>
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
-	<% if(m != null ) { %>
+	<c:import url="../common/header.jsp"/>
+	<c:if test="${ !empty member }">
 	<div class="outer">
 		<br>
 		<h2 align="center">게시글 내용</h2>
@@ -77,50 +73,50 @@
 				<table align="center" width="800px">
 					<tr>
 						<td>제목 </td>
-						<td colspan="5"><span><%= b.getBtitle() %></span></td>
+						<td colspan="5"><span>${board.btitle}</span></td>
 					</tr>
 					<tr>
 						<td>작성자 </td>
-						<td><span><%= b.getBwriter() %></span></td>
+						<td><span>${board.bwriter}</span></td>
 						<td>작성일</td>
-						<td><span><%= b.getBdate() %></span></td>
+						<td><span>${board.bdate}</span></td>
 						<td>조회수 </td>
-						<td><span><%= b.getBcount() %></span></td>
+						<td><span>${board.bcount}</span></td>
 					</tr>
-					<% if(b.getBoardfile() != null && b.getBoardfile().length() > 0) { %>
+					<c:if test="${ !empty board.boardfile && fn:length(board.boardfile) > 0}">
 					<tr>
 						<td>첨부파일 </td>
 						<td colspan="5">
 							<%-- <a href="/myWeb/bfdown.bo?path=<%=b.getBoardfile() %>"> --%>
-							<a href="/myWeb/resources/boardUploadFiles/<%=b.getBoardfile() %>" download>
-							<%=b.getBoardfile() %>
+							<a href="/myWeb/resources/boardUploadFiles/${board.boardfile}" download>
+							${board.boardfile }
 							</a>
 						</td>
 					</tr>
-					<% } %>
+					</c:if>
 					<tr>
 						<td colspan="6">내용 </td>
 					</tr>
 					<tr>
 						<td colspan="6">
-							<p id="content"><%= b.getBcontent() %>
+							<p id="content">${board.bcontent}
 						</td>
 					</tr>
 				</table>
 				<br>
 		</div>
 		<div align="center">
-			<button onclick="location.href='<%= request.getContextPath() %>/selectList.bo'">메뉴로 돌아가기</button>
-			<% if(m != null && m.getUserName().equals(b.getBwriter())){ %>
-			<button onclick="location.href='<%= request.getContextPath() %>/bUpView.bo?bno='+<%=b.getBid()%>">수정하기</button>
-			<% } %>
+			<button onclick="location.href='${pageContext.request.contextPath}/selectList.bo'">메뉴로 돌아가기</button>
+			<c:if test="${!empty member && member.userName eq board.bwriter }">
+			<button onclick="location.href='${pageContext.request.contextPath}/bUpView.bo?bno='+${board.bid}">수정하기</button>
+			</c:if>
 		</div>
 	</div>
 	<div class="replyArea">
 		<div class="replyWriteArea">
 			<form action="/myWeb/insertComment.bo" method="post">
-				<input type="hidden" name="writer" value="<%=m.getUserId()%>"/>
-				<input type="hidden" name="bno" value="<%=b.getBid() %>" />
+				<input type="hidden" name="writer" value="${member.userId}"/>
+				<input type="hidden" name="bno" value="${board.bid}" />
 				<input type="hidden" name="refcno" value="0" />
 				<input type="hidden" name="clevel" value="1" />
 				
@@ -134,19 +130,20 @@
 			</form>
 		</div>
 		<div id="replySelectArea">
-	      <% if( clist != null ) { %>
-	      	<% for(BoardComment bco : clist) { %>
+		  <c:if test="${ !empty clist }">
+		  	<c:forEach items="${clist}" var="bco">
 	      	<table id="replySelectTable"
-	      	 style="margin-left : <%= (bco.getClevel()-1) * 15 %>px;
-	      	 		width : <%= 800 - ((bco.getClevel()-1) * 15)%>px;"
-	      	 class="replyList<%=bco.getClevel()%>">
+	      	 style="margin-left : ${ (bco.clevel -1)*15}px;
+	      	 		width : ${ 800 - (bco.clevel - 1)*15}px;"
+	      	 class="replyList${bco.clevel}">
 		  		<tr>
 		  			<td rowspan="2"> </td>
-					<td><b><%= bco.getCwriter() %></b></td>
-					<td><%= bco.getCdate() %></td>
+					<td><b>${bco.cwriter }</b></td>
+					<td>${bco.cdate}</td>
 					<td align="center">
-					<%if(m.getUserName().equals(bco.getCwriter())) { %>
-						<input type="hidden" name="cno" value="<%=bco.getCno()%>"/>
+					<c:choose>
+					<c:when test="${member.userName eq bco.cwriter }">
+						<input type="hidden" name="cno" value="${bco.cno}"/>
 							  
 						<button type="button" class="updateBtn" 
 							onclick="updateReply(this);">수정하기</button>
@@ -157,11 +154,11 @@
 							
 						<button type="button" class="deleteBtn"
 							onclick="deleteReply(this);">삭제하기</button>
-							
-					<% } else if( bco.getClevel() < 3) { %>
-						<input type="hidden" name="writer" value="<%=m.getUserId()%>"/>
-						<input type="hidden" name="refcno" value="<%= bco.getCno() %>" />
-						<input type="hidden" name="clevel" value="<%=bco.getClevel() %>" />
+					</c:when>
+					<c:when test="${bco.clevel < 3 }">
+						<input type="hidden" name="writer" value="${member.userId}"/>
+						<input type="hidden" name="refcno" value="${bco.cno}" />
+						<input type="hidden" name="clevel" value="${bco.clevel}" />
 						<button type="button" class="insertBtn" 
 							 onclick="reComment(this);">댓글 달기</button>&nbsp;&nbsp;
 							 
@@ -169,19 +166,22 @@
 							onclick="reConfirm(this);"
 							style="display:none;" >댓글 추가 완료</button> 
 							
-					<% } else {%>
+					</c:when>
+					<c:otherwise>
 						<span> 마지막 레벨입니다.</span>
-					<% } %>
+					</c:otherwise>
+					</c:choose>
 					</td>
 				</tr>
-				<tr class="comment replyList<%=bco.getClevel()%>">
+				<tr class="comment replyList${bco.clevel}">
 					<td colspan="3" style="background : transparent;">
 					<textarea class="reply-content" cols="105" rows="3"
-					 readonly="readonly"><%= bco.getCcontent() %></textarea>
+					 readonly="readonly">${bco.ccontent}</textarea>
 					</td>
 				</tr>
 			</table>
-	  		<% } } %>
+	  		</c:forEach>
+	  		</c:if>
 		</div>
 	</div>
 	<script>
@@ -206,7 +206,7 @@
 			var cno = $(obj).siblings('input').val();
 			
 			// 게시글 번호 가져오기
-			var bno = '<%=b.getBid()%>';
+			var bno = '${board.bid}';
 			
 			location.href="/myWeb/updateComment.bo?"
 					 +"cno="+cno+"&bno="+bno+"&content="+content;
@@ -217,7 +217,7 @@
 			var cno = $(obj).siblings('input').val();
 			
 			// 게시글 번호 가져오기
-			var bno = '<%=b.getBid()%>';
+			var bno = '${board.bid}';
 			
 			location.href="/myWeb/deleteComment.bo"
 			+"?cno="+cno+"&bno="+bno;
@@ -252,7 +252,7 @@
 			// console.log(refcno + " : " + level);
 			
 			// 게시글 번호 가져오기
-			var bno = '<%=b.getBid()%>';
+			var bno = '${board.bid}';
 			
 			var parent = $(obj).parent();
 			var grandparent = parent.parent();
@@ -270,18 +270,18 @@
 			// bno, refcno, clevel
 			
 			location.href='/myWeb/insertComment.bo'
-			           + '?writer=<%= m.getUserId() %>' 
+			           + '?writer=${member.userId}' 
 			           + '&replyContent=' + content
 			           + '&bno=' + bno
 			           + '&refcno=' + refcno
 			           + '&clevel=' + level;
 		}
 	</script>
-	<% } else {
-		request.setAttribute("msg", "회원만 가능한 서비스 입니다.");
-		request.getRequestDispatcher("/views/common/errorPage.jsp").forward(request, response);
-	}
-	%>
-	<%@ include file="../common/footer.jsp" %>
+	</c:if>
+	<c:if test="${ empty member }">
+		<c:set var="msg" value="회원만 가능한 서비스 입니다." scope="session"/>
+		<c:redirect url="/views/common/errorPage.jsp"/>
+	</c:if>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

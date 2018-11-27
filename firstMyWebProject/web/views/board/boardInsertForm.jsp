@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,13 +33,13 @@
 
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
-	<% if (m != null) { %>
+	<c:import url="../common/header.jsp"/>
+	<c:if test="${!empty member}">
 	<div class="outer">
 		<br>
 		<h2 align="center">게시판 작성</h2>
 		<div class="tableArea">
-			<form action="<%= request.getContextPath() %>/bInsert.bo" 
+			<form action="${ pageContext.request.contextPath}/bInsert.bo" 
 			      method="post" enctype="multipart/form-data">
 				<table>
 					<tr>
@@ -45,8 +48,8 @@
 					</tr>
 					<tr>
 						<td>작성자 </td>
-						<td colspan="3"><%= m.getUserName() %>
-							<input type="hidden" name="userId" value="<%= m.getUserId() %>"/>
+						<td colspan="3">${member.userName}
+							<input type="hidden" name="userId" value="${member.userId}"/>
 						</td>
 					</tr>
 					<tr>
@@ -70,10 +73,11 @@
 			</form>
 		</div>
 	</div>
-	<% } else { 
-		request.setAttribute("msg", "회원만 열람 가능합니다.");
-		request.getRequestDispatcher("../common/errorPage.jsp").forward(request, response);
-	 } %>
+	</c:if>
+	<c:if test="${ empty member }">
+		<c:set var="msg" value="회원만 열람 가능합니다." scope="session"/>
+		<c:redirect url="../common/errorPage.jsp"/>
+	</c:if>
 	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>
