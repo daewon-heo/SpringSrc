@@ -83,7 +83,7 @@
 			
 			<c:forEach var="p" begin="${pi.startPage}" end="${pi.endPage}">
 				<c:if test="${p eq pi.currentPage }">
-					<button disabled>${i}</button>
+					<button disabled>${p}</button>
 				</c:if>
 				<c:if test="${p ne pi.currentPage }">
 					<button onclick="location.href='${pageContext.request.contextPath}/selectList.bo?currentPage=${p }'">${p}</button>
