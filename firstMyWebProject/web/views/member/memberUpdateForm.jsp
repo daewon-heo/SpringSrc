@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="${requestScope.request.getContextPath() }/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.3.1.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <title>회원 정보 수정</title>
 <style>

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="${requestScope.request.getContextPath()}/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.3.1.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <title>회원 가입 양식</title>
 <style>
@@ -49,8 +49,8 @@
 		<br>
 		<h2 align="center">회원가입</h2>
 		
-		<form id="joinForm" action="${requestScope.request.getContextPath()}/mInsert.me" method="post">
-			
+		<form id="joinForm" action="${pageContext.request.contextPath}/mInsert.me" method="post">
+
 			<table align="center">
 				<tr>
 					<td width="200px">* 아이디 </td>
