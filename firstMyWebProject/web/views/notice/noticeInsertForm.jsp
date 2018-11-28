@@ -33,7 +33,7 @@
 </head>
 <body>
 	<c:import url="../common/header.jsp"/>
-	<c:if test="${ !empty member && member.userId eq 'admin' }">
+	<c:if test="${ !empty member and member.userId eq 'admin' }">
 	<div class="outer">
 		<br>
 		<h2 align="center">공지 사항 작성</h2>
@@ -73,10 +73,12 @@
 		</div>
 	</div>
 	</c:if>
-	<c:if test="${ empty member }">
-		<c:set var="msg" value="관계자 외에 접근이 불가능한 페이지입니다." scope="session"/>
-		<c:redirect url="views/common/errorPage.jsp"/>
+	<c:if test="${ empty member or member.userId ne 'admin' }">
+		<c:url var="errorPage" value="../common/errorPage.jsp">
+			<c:param name="msg" value="관계자 외에 접근이 불가능한 페이징비니다."/>
+		</c:url>
+		<c:redirect url="${errorPage }"/>
 	</c:if>
-	<c:import url="../common/footer.jsp"></c:import>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

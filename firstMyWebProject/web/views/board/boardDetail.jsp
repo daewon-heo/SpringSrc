@@ -88,7 +88,7 @@
 						<td>첨부파일 </td>
 						<td colspan="5">
 							<%-- <a href="/myWeb/bfdown.bo?path=<%=b.getBoardfile() %>"> --%>
-							<a href="/myWeb/resources/boardUploadFiles/${board.boardfile}" download>
+							<a href="${pageContext.request.contextPath}/myWeb/resources/boardUploadFiles/${board.boardfile}" download>
 							${board.boardfile }
 							</a>
 						</td>
@@ -279,8 +279,10 @@
 	</script>
 	</c:if>
 	<c:if test="${ empty member }">
-		<c:set var="msg" value="회원만 가능한 서비스 입니다." scope="session"/>
-		<c:redirect url="/views/common/errorPage.jsp"/>
+		<c:url var="errorPage" value="../common/errorPage.jsp">
+			<c:param name="msg" value="회원만 가능한 서비스 입니다."/>		
+		</c:url>
+		<c:redirect url="${errorPage}"/>
 	</c:if>
 	<c:import url="../common/footer.jsp"/>
 </body>

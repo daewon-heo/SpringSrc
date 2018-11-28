@@ -74,7 +74,7 @@
 			</select>
 			<input type="search" id="keyword" placeholder="키워드를 입력하세요!"> 
 			<button type="button" onclick="search();">검색하기</button>
-			<c:if test="${!empty member && member.userId eq 'admin'}">
+			<c:if test="${!empty member and member.userId eq 'admin'}">
 			 	<button onclick="location.href='views/notice/noticeInsertForm.jsp'">작성하기</button>
 			</c:if>
 		</div>
@@ -97,6 +97,6 @@
 		}
 		
 	</script>
-	<c:import url="../common/footer.jsp"></c:import>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

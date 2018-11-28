@@ -75,9 +75,11 @@
 	</div>
 	</c:if>
 	<c:if test="${ empty member }">
-		<c:set var="msg" value="회원만 열람 가능합니다." scope="session"/>
-		<c:redirect url="../common/errorPage.jsp"/>
+		<c:url var="errorPage" value="../common/errorPage.jsp">
+			<c:param name="msg" value="회원만 접근 가능합니다."/>
+		</c:url>
+		<c:redirect url="${errorPage}"/>
 	</c:if>
-	<%@ include file="../common/footer.jsp" %>
+	<c:import url="../common/footer.jsp"/>
 </body>
 </html>

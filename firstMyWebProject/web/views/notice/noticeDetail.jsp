@@ -76,7 +76,11 @@
 					<button onclick="location.href='selectList.no'">메뉴로 돌아가기</button>
 
 					<c:if test="${!empty member && member.userId eq 'admin'}">
-						<button onclick="location.href='nUpView.no?nno=${notice.nno}'">수정하기</button>
+						<c:url var="nUpView" value="nUpView.no">
+							<c:param name="nno" value="${notice.nno}"/>
+						</c:url>
+						
+						<button onclick="location.href='${nUpView}'">수정하기</button>
 					</c:if>
 				</div>
 		</div>
