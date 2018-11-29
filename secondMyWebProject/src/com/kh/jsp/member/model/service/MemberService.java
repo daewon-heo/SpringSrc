@@ -2,11 +2,15 @@ package com.kh.jsp.member.model.service;
 
 import java.sql.Connection;
 
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
 import com.kh.jsp.member.exception.MemberException;
 import com.kh.jsp.member.model.dao.MemberDao;
 import com.kh.jsp.member.model.vo.Member;
 
 import static com.kh.jsp.common.JDBCTemplate.*;
+import static com.kh.jsp.common.MySqlSessionFactory.getSqlSessionFactory;
 
 public class MemberService {
 
@@ -14,15 +18,16 @@ public class MemberService {
 	
 	
 	public int insertMember(Member m) throws MemberException {
+		/*Connection con = getConnection();*/
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		Connection con = getConnection();
+		int result = mDao.insertMember(ses, m);
 		
-		int result = mDao.insertMember(con, m);
+		if(result > 0) ses.commit();
+		else  ses.rollback();
 		
-		if(result > 0) commit(con);
-		else  rollback(con);
-		
-		close(con);
+//		close(con);
+		ses.close();
 		
 		return result;
 	}
@@ -30,11 +35,15 @@ public class MemberService {
 
 	public Member selectMember(Member m) throws MemberException {
 		
-		Connection con = getConnection();
+		/*Connection con = getConnection();*/
 		
-		Member result = mDao.selectMember(con, m);
+		// openSession() : 안의 참/거짓 결과에 따라서 자동 커밋이 활성화 / 비활성화 된다.
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		close(con);
+		Member result = mDao.selectMember(ses, m);
+		
+//		close(con);
+		ses.close();
 		
 		if(result == null) throw new MemberException("아이디나 비밀번호가 일치하는 회원 없음");
 		
@@ -43,39 +52,46 @@ public class MemberService {
 
 
 	public int updateMember(Member m) throws MemberException {
-		Connection con = getConnection();
+		/*Connection con = getConnection();*/
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		int result = mDao.updateMember(con, m);
+		int result = mDao.updateMember(ses, m);
 		
-		if(result > 0) commit(con);
-		else  rollback(con);
+		if(result > 0) ses.commit();
+		else  ses.rollback();
 		
-		close(con);
+//		close(con);
+		ses.close();
 		
 		return result;
 	}
 
 
 	public int deleteMember(String userId) throws MemberException {
-		Connection con = getConnection();
 		
-		int result = mDao.deleteMember(con, userId);
+		/*Connection con = getConnection();*/
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		if(result > 0) commit(con);
-		else  rollback(con);
+		int result = mDao.deleteMember(ses, userId);
 		
-		close(con);
+		if(result > 0) ses.commit();
+		else  ses.rollback();
+		
+		/*close(con);*/
+		ses.close();
 		
 		return result;
 	}
 
 
 	public int idDupCheck(String id) {
-		Connection con = getConnection();
+		/*Connection con = getConnection();*/
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		int result = mDao.idDupCheck(con, id);
+		int result = mDao.idDupCheck(ses, id);
 		
-		close(con);
+		/*close(con);*/
+		ses.close();
 		
 		return result;
 	}

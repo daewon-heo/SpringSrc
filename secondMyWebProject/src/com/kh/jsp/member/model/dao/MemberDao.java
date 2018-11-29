@@ -3,15 +3,13 @@ package com.kh.jsp.member.model.dao;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Properties;
+
+import org.apache.ibatis.session.SqlSession;
 
 import com.kh.jsp.member.exception.MemberException;
 import com.kh.jsp.member.model.vo.Member;
-import static com.kh.jsp.common.JDBCTemplate.*;
 
 public class MemberDao {
 	private Properties prop;
@@ -30,177 +28,50 @@ public class MemberDao {
 		}
 	}
 
-	public int insertMember(Connection con, Member m) throws MemberException {
+	public int insertMember(SqlSession ses, Member m) throws MemberException {
 		
-		int result = 0;
-		PreparedStatement pstmt = null;
-		
-		String sql = prop.getProperty("insertMember");
-		
-		try {
-			
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, m.getUserId());
-			pstmt.setString(2, m.getPassword());
-			pstmt.setString(3, m.getUserName());
-			pstmt.setString(4, m.getGender());
-			pstmt.setInt(5, m.getAge());
-			pstmt.setString(6, m.getEmail());
-			pstmt.setString(7, m.getPhone());
-			pstmt.setString(8, m.getAddress());
-			pstmt.setString(9, m.getHobby());
-			
-			result = pstmt.executeUpdate();
-		
-		} catch (SQLException e) {
-			
-			throw new MemberException(e.getMessage());
-			// e.printStackTrace();
-		
-		} finally {
-			
-			close(pstmt);
-			
-		}
-		
-		return result;
-	}
-
-	public Member selectMember(Connection con, Member m) throws MemberException {
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
-		Member result = null;
-		
-		String sql = prop.getProperty("selectMember");
-		
-		try {
-			
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, m.getUserId());
-			pstmt.setString(2, m.getPassword());
-			
-			rset = pstmt.executeQuery();
-			
-			if(rset.next()) {
-				result = new Member();
-				
-				result.setUserId(rset.getString(1));
-				result.setPassword(rset.getString(2));
-				result.setUserName(rset.getString(3));
-				
-				result.setGender(rset.getString("GENDER"));
-				result.setAge(rset.getInt("age"));
-				result.setEmail(rset.getString("email"));
-				result.setPhone(rset.getString("phone"));
-				result.setAddress(rset.getString("address"));
-				result.setHobby(rset.getString("hobby"));
-				result.setEnrollDate(rset.getDate("ENROLLDATE"));
-			}
-			
-		} catch (SQLException e) {
-			
-			// e.printStackTrace();
-			throw new MemberException(e.getMessage());
-			
-		} finally {
-			close(rset);
-			close(pstmt);
-		}
+		int result = ses.insert("Member_mapper.insertMember", m);
 
 		return result;
 	}
 
-	public int updateMember(Connection con, Member m) throws MemberException {
+	public Member selectMember(SqlSession ses, Member m) throws MemberException {
+		// 반환값이 객체이다.
+		// selectOne() : 객체 하나를 가져오는 메소드
+		// selectList() : 객체 배열을 가져오는 메소드
+		// selectMap() : 특정 맵 객체를 가져오는 메소드
+		// -------------------------------------------
+		// 반환값이 int형 값이다.
+		// insert() : 객체 정보 추가 시 사용하는 메소드
+		// update() : 객제 정보 수정 시 사용하는 메소드
+		// delete() : 객체 정보 삭제 시 사용하는 메소드
+		return ses.selectOne("Member_mapper.selectMember", m);
+	}
 
-		int result = 0;
-		PreparedStatement pstmt = null;
-		
-		String sql = prop.getProperty("updateMember");
-		
-		try {
-			
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, m.getPassword());
-			pstmt.setString(2, m.getEmail());
-			pstmt.setInt(3, m.getAge());
-			pstmt.setString(4, m.getPhone());
-			pstmt.setString(5, m.getAddress());
-			pstmt.setString(6, m.getHobby());
-			pstmt.setString(7, m.getUserId());
-			
-			result = pstmt.executeUpdate();
-		
-		} catch (SQLException e) {
-		
-			//e.printStackTrace();
-			throw new MemberException(e.getMessage());
-		} finally {
-			
-			close(pstmt);
-			
-		}
+	public int updateMember(SqlSession ses, Member m) throws MemberException {
+
+		int result = ses.update("Member_mapper.updateMember", m);
 		
 		return result;
 	}
 	
-	public int deleteMember(Connection con, String userId) throws MemberException {
+	public int deleteMember(SqlSession ses, String userId) throws MemberException {
 
-		int result = 0;
-		PreparedStatement pstmt = null;
-		
-		String sql = prop.getProperty("deleteMember");
-		
-		try {
-			
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, userId);
-			
-			result = pstmt.executeUpdate();
-		
-		} catch (SQLException e) {
-		
-			//e.printStackTrace();
-			throw new MemberException(e.getMessage());
-		} finally {
-			
-			close(pstmt);
-			
-		}
+		int result = ses.delete("Member_mapper.deleteMember", userId);
 		
 		return result;
 	}
 
-	public int idDupCheck(Connection con, String id) {
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
-		int result = 0;
-		
-		String sql = prop.getProperty("idDupCheck");
-		
-		try {
-		
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, id);
-			
-			rset = pstmt.executeQuery();
-			
-			if(rset.next()) result = rset.getInt(1);
-			
-		} catch (SQLException e) {
+	public int idDupCheck(SqlSession ses, String id) {
 
-			e.printStackTrace();
-			
-		} finally {
-			close(rset);
-			close(pstmt);
-		}
+		HashMap<String, Object> hmap
+			= new HashMap<String, Object>();
 		
-		return result;
+		hmap.put("userId", id);
+		
+		ses.selectOne("Member_mapper.idDupCheck", hmap);
+		
+		return (int)hmap.get("result");
 	}
 
 }

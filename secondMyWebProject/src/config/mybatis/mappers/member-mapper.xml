@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Member_mapper">
+<!-- namespace는 실제 마이바티스를 통해 SQL에 접근할 때 
+사용하는 매퍼 파일의 이름을 별칭으로 표현한 것이다.
+보통 사용하고자 하는 서비스의 이름과 동일하게 설정하여 
+각 매퍼 파일간의  연결 착오를 줄일 수 있다. -->
+	<select id="selectMember" parameterType="Member" 
+							  resultType="Member">
+		SELECT * FROM MEMBER WHERE USERID = #{userId} AND PASSWORD = #{password}
+	</select>
+	
+	<insert id="insertMember" parameterType="Member">
+		INSERT INTO MEMBER VALUES(
+			#{userId}, #{password}, #{userName}, #{gender}, #{age},
+			#{email}, #{phone}, #{address}, #{hobby}, DEFAULT
+		)
+	</insert>
+	
+	<update id="updateMember" parameterType="Member">
+		UPDATE MEMBER SET 
+			PASSWORD = #{password}, EMAIL = #{email}, AGE = #{age}, PHONE = #{phone}, 
+			ADDRESS = #{address}, HOBBY = #{hobby} WHERE USERID = #{userId}
+	</update>
+	
+	<delete id="deleteMember" parameterType="string">
+		DELETE FROM MEMBER WHERE USERID = #{userId}	
+	</delete>
+	
+	<select id="idDupCheck" parameterType="hashmap"
+			statementType="CALLABLE">
+			<!-- 
+				CallableStatement { } 로 묶어 작성하여야 한다.
+				또한 시작괄호 '{' 다음에 tab 기호를 인식 하지 못하기 때문에
+				줄바꿈, 빈칸 정렬 등에 주의 해야 한다.
+			 -->
+			 { CALL ID_DUP_CHK(
+			 	#{userId, mode=IN, jdbcType=VARCHAR},
+			 	#{result, mode=OUT, jdbcType=NUMERIC, javaType=integer}
+			 )}
+	</select>
+	
+	
+</mapper>
