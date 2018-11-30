@@ -17,6 +17,9 @@
 		         alias="Member"/>
 		<typeAlias type="com.kh.jsp.notice.model.vo.Notice"
 			     alias="Notice" />
+		<typeAlias type="com.kh.jsp.board.model.vo.Board" alias="Board" />
+		<typeAlias type="com.kh.jsp.boardComment.model.vo.BoardComment"
+			     alias="BoardComment" />
 	</typeAliases>
 	
 	<!-- 접속할 DB들의 환경 설정을 등록하는 태그 -->
@@ -42,6 +45,9 @@
 	    에러가 발생한다. -->
 	<mappers>
 		<mapper resource="config/mybatis/mappers/member-mapper.xml"/>
+		<mapper resource="config/mybatis/mappers/notice-mapper.xml"/>
+		<mapper resource="config/mybatis/mappers/board-mapper.xml"/>
+		<!-- <mapper resource="config/mybatis/mappers/comment-mapper.xml"/> -->
 	</mappers>
 
 </configuration>

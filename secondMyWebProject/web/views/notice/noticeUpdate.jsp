@@ -32,7 +32,7 @@
 </head>
 <body>
 	<c:import url="../common/header.jsp"/>
-	<c:if test="${ !empty member and userId eq 'admin' }">
+	<c:if test="${ !empty member and member.userId eq 'admin' }">
 	<div class="outer">
 		<br>
 		<h2 align="center">공지 사항 수정</h2>
@@ -43,7 +43,7 @@
 						<td>제목 </td>
 						<td colspan="3">
 							<input type="text" size="50" name="title" 
-							       value="${fn:replace(notice.ntitle, '\"', '&#34;')">
+							       value="${fn:replace(notice.ntitle, '\"', '&#34;')}">
 							<input type="hidden" name="nno" value="${notice.nno }">
 						</td>
 					</tr>

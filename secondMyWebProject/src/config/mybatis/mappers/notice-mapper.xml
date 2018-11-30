@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Notice_mapper">
+	<!-- 
+		마이바티스를 통한 select 조회 결과
+		resultType : 기존에 config 파일을 통해 등록한 VO객체에 값을 담을때 사용 
+		resultMap :  개발자가 임의로 DB의 조회 결과와 VO의 필드 내용이 
+				   	  서로 다른 형식의 객체를 매칭시켜주는 객체를 사용
+	 -->
+	 
+	<resultMap type="Notice" id="resultNotice">
+		<!-- property : 자바에서 쓰일 변수명 / column : DB에서 조회한 결과 컬럼 -->
+		<!-- 아이디는 없어도 된다. -->
+		<id property="nno" column="NNO"/>
+		<result property="ntitle" column="NTITLE"/>
+		<result property="nwriter" column="username"/>
+		<result property="ncontent" column="ncontent"/>
+		<result property="ncount" column="ncount"/>
+		<result property="ndate" column="ndate"/>				
+	</resultMap> 
+	
+	<!-- resultMap, resultType 은 둘 중 하나만 사용할 수 있음 -->
+	<select id="selectList" resultMap="resultNotice">
+		SELECT N.*, (SELECT USERNAME FROM MEMBER WHERE N.NWRITER = USERID) USERNAME FROM NOTICE N
+	</select>
+	
+	<select id="selectOne" parameterType="_int" resultType="Notice">
+		SELECT N.*, (SELECT USERNAME FROM MEMBER WHERE N.NWRITER = USERID) USERNAME FROM NOTICE N WHERE NNO = #{nno}
+	</select>
+	
+	<update id="updateCount" parameterType="_int">
+		UPDATE NOTICE SET NCOUNT = NCOUNT + 1 WHERE NNO = #{nno}
+	</update>
+	
+	<update id="updateNotice" parameterType="Notice">
+		UPDATE NOTICE SET NTITLE = #{ntitle}, NCONTENT = #{ncontent} WHERE NNO = #{nno}
+	</update>
+	
+	<insert id="insertNotice" parameterType="Notice">
+		INSERT INTO NOTICE VALUES(SEQ_NNO.NEXTVAL, #{ntitle}, #{ncontent}, #{nwriter}, DEFAULT, #{ndate})
+	</insert>
+	
+	<select id="searchWriterNotice" parameterType="string" resultMap="resultNotice">
+		SELECT NNO, NTITLE, NCONTENT, USERNAME, NCOUNT, NDATE FROM NOTICE
+		JOIN MEMBER ON (NWRITER = USERID)
+		WHERE USERNAME LIKE '%' || #{keyword} || '%'
+	</select>
+	
+	<select id="searchTitleNotice" parameterType="string" resultMap="resultNotice">
+		SELECT NNO, NTITLE, NCONTENT, USERNAME, NCOUNT, NDATE FROM NOTICE
+		JOIN MEMBER ON (NWRITER = USERID)
+		WHERE NTITLE LIKE CONCAT( CONCAT('%', #{keyword}), '%')
+	</select>
+	
+	<select id="searchContentNotice" parameterType="string" resultMap="resultNotice">
+		SELECT NNO, NTITLE, NCONTENT, USERNAME, NCOUNT, NDATE FROM NOTICE
+		JOIN MEMBER ON (NWRITER = USERID)
+		WHERE NCONTENT LIKE CONCAT( CONCAT('%', #{keyword}), '%')
+	</select>
+	
+	<select id="searchNotice" parameterType="hashmap" resultMap="resultNotice">
+		SELECT * FROM NOTICE JOIN MEMBER ON (USERID = NWRITER)
+		<bind name="myPattern" value="'%' + keyword +'%'"></bind>
+		<where>
+			<if test="condition =='writer'">USERNAME LIKE #{myPattern}</if>
+			<if test="condition =='title'">NTITLE LIKE #{myPattern}</if>
+			<if test="condition =='content'">NCONTENT LIKE #{myPattern}</if>
+		</where>
+	</select>
+
+</mapper>

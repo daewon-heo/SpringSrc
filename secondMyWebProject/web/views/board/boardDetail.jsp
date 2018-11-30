@@ -109,10 +109,10 @@
 		<div align="center">
 			<button onclick="location.href='${pageContext.request.contextPath }/selectList.bo'">메뉴로 돌아가기</button>
 			<c:if test="${ !empty member and member.userName eq board.bwriter }">
-				<c:url var="boardUpdate" value="${pageContext.request.contextPath }/bUpView.bo">
+				<c:url var="boardUpdate" value="bUpView.bo">
 					<c:param name="bno" value="${board.bid }" />
 				</c:url>
-				<button onclick="location.href='${boardUpdate}">수정하기</button>
+				<button onclick="location.href='${boardUpdate}'">수정하기</button>
 			</c:if>
 		</div>
 	</div>

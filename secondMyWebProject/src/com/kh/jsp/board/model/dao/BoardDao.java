@@ -10,7 +10,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Properties;
+
+import org.apache.ibatis.session.RowBounds;
+import org.apache.ibatis.session.SqlSession;
 
 import com.kh.jsp.board.model.vo.Board;
 
@@ -32,242 +36,54 @@ public class BoardDao {
 		}
 	}
 	
-	public int getListCount(Connection con){
-		Statement stmt = null;
-		int listCount = 0;
-		ResultSet rset = null;
+	public int getListCount(SqlSession ses){
 		
-		String sql = prop.getProperty("listCount");
-		
-		try {
-			
-			stmt = con.createStatement();
-			
-			rset = stmt.executeQuery(sql);
-			
-			if(rset.next()){
-				
-				listCount = rset.getInt(1);
-				
-			}
-			
-		} catch (SQLException e) {
-			
-			e.printStackTrace();
-			
-		} finally {
-			close(rset);
-			close(stmt);
-		}
-		
-		return listCount;
+		return ses.selectOne("Board_mapper.getListCount");
 	}
 
-	public ArrayList<Board> selectList(Connection con, int currentPage, int limit) {
-		ArrayList<Board> list = null;
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
+	public ArrayList<Board> selectList(SqlSession ses, int currentPage, int limit) {
+		// 게시판은 페이징 처리를 위한 시작 페이지번호와 끝 페이지 번호를 가져야 한다.
+		// 일반적인 페이징 처리
+		/*HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 		
-		String sql = prop.getProperty("selectList");
+		int startRow = (currentPage - 1) * limit + 1;
+		int endRow = startRow + limit - 1;
 		
-		try {
+		hmap.put("startRow", startRow);
+		hmap.put("endRow", endRow);
 		
-			pstmt = con.prepareStatement(sql);
+		return new ArrayList<Board>(ses.selectList("Board_mapper.selectList",hmap));*/
 		
-			// 1, 마지막 행 번호
-			// 2, 첫 행 번호
-			
-			int startRow = (currentPage -1) * limit + 1; // 1 -> 1, 2 -> 11
-			int endRow = startRow + limit -1;
-			
-			pstmt.setInt(1, endRow);
-			pstmt.setInt(2, startRow);
-			
-			rset = pstmt.executeQuery();
-			
-			list = new ArrayList<Board>();
-			
-			while(rset.next()){
-				Board b = new Board();
-				
-				b.setBid(rset.getInt("BID"));
-				b.setBno(rset.getInt("BNO"));
-				b.setBtype(rset.getInt("BTYPE"));
-				b.setBtitle(rset.getString("BTITLE"));
-				b.setBcontent(rset.getString("BCONTENT"));
-				b.setBwriter(rset.getString("USERNAME"));
-				b.setBcount(rset.getInt("BCOUNT"));
-				b.setBdate(rset.getDate("BDATE"));
-				b.setBoardfile(rset.getString("BOARDFILE"));
-				
-				list.add(b);
-			}
-			
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-			
-		} finally {
-			close(rset);
-			close(pstmt);
-		}
+		// 마이바티스의 ROWBOUNDS를 활용한 페이징 처리
+		int startRow = (currentPage - 1) * limit;
+		RowBounds rows = new RowBounds(startRow, limit);
 		
-		return list;
+		return new ArrayList<Board>(ses.selectList("Board_mapper.selectRowBounds", null, rows));
 	}
 
-	public int insertBoard(Connection con, Board b) {
-		PreparedStatement pstmt = null;
-		int result = 0;
-		
-		String sql = prop.getProperty("insertBoard");
-		
-		try {
-		
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, b.getBtitle());
-			pstmt.setString(2, b.getBcontent());
-			pstmt.setString(3, b.getBwriter());
-			pstmt.setString(4, b.getBoardfile());
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+	public int insertBoard(SqlSession ses, Board b) {
+		System.out.println("insertboard");
+		return ses.insert("Board_mapper.insertBoard", b);
 	}
 
-	public Board selectOne(Connection con, int bid) {
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
-		Board b = null;
+	public Board selectOne(SqlSession ses, int bid) {
 		
-		String sql = prop.getProperty("selectOne");
-		
-		try {
-		
-			pstmt = con.prepareStatement(sql);
-
-			pstmt.setInt(1, bid);
-			
-			rset = pstmt.executeQuery();
-			
-			if(rset.next()){
-				b = new Board();
-
-				b.setBid(rset.getInt("BID"));
-				b.setBno(rset.getInt("BNO"));
-				b.setBtype(rset.getInt("BTYPE"));
-				b.setBtitle(rset.getString("BTITLE"));
-				b.setBcontent(rset.getString("BCONTENT"));
-				b.setBwriter(rset.getString("USERNAME"));
-				b.setBcount(rset.getInt("BCOUNT"));
-				b.setBdate(rset.getDate("BDATE"));
-				b.setBoardfile(rset.getString("BOARDFILE"));
-				
-			}
-			
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-		} finally {
-			close(rset);
-			close(pstmt);
-		}
-		
-		return b;
+		return ses.selectOne("Board_mapper.selectOne", bid);
 	}
 
-	public int updateBoard(Connection con, Board b) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	public int updateBoard(SqlSession ses, Board b) {
 		
-		String sql = prop.getProperty("updateBoard");
-		
-		try {
-		
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setString(1, b.getBtitle());
-			pstmt.setString(2, b.getBcontent());
-			pstmt.setString(3, b.getBoardfile());
-			pstmt.setInt(4, b.getBid());
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally{
-			close(pstmt);
-		}
-		return result;
+		return ses.update("Board_mapper.updateBoard", b);
 	}
 
-	public int deleteBoard(Connection con, int bid) {
-		PreparedStatement pstmt = null;
-		int result = 0;
-		
-		String sql = prop.getProperty("deleteBoard");
-		
-		try {
-		
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setInt(1, bid);
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally{
-			close(pstmt);
-		}
-		return result;
+	public int deleteBoard(SqlSession ses, int bid) {
+		System.out.println("deleteboard : " + bid);
+		return ses.update("Board_mapper.deleteBoard", bid);
 	}
 
-	public ArrayList<Board> top5(Connection con) {
-		Statement stmt = null;
-		ResultSet rset = null;
-		ArrayList<Board> list = null;
+	public ArrayList<Board> top5(SqlSession ses) {
 		
-		String sql = prop.getProperty("selectTop5");
-		
-		try {
-		
-			stmt = con.createStatement();
-			
-			rset = stmt.executeQuery(sql);
-			
-			list = new ArrayList<Board>();
-			
-			while(rset.next()){
-				Board b = new Board();
-				
-				b.setBid(rset.getInt("BID"));
-				b.setBno(rset.getInt("BNO"));
-				b.setBcontent(rset.getString("BCONTENT"));
-				b.setBtitle(rset.getString("BTITLE"));
-				b.setBwriter(rset.getString("USERNAME"));
-				b.setBcount(rset.getInt("BCOUNT"));
-				b.setBdate(rset.getDate("BDATE"));
-				
-				list.add(b);
-			}
-		} catch (SQLException e) {
-			
-			e.printStackTrace();
-			
-		} finally {
-			close(rset);
-			close(stmt);
-		}
-		
-		return list;
+		return new ArrayList<Board>(ses.selectList("Board_mapper.top5"));
 	}
 	
 }

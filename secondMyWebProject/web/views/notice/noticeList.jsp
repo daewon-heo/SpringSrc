@@ -62,6 +62,7 @@
 			</c:forEach>
 		</table>
 		</div>
+	</div>
 		<div class="searchArea" align="center">
 			<select id="searchCondition" name="searchCondition">
 				<option value="">---</option>
@@ -75,7 +76,6 @@
 				<button onclick="location.href='views/notice/noticeInsertForm.jsp'">작성하기</button>
 			</c:if>
 		</div>
-	</div>
 	<script>  
 		$(function(){
 			

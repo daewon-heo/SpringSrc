@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board_mapper">
+
+	<resultMap id="resultBoard" type="Board">
+		<id property="bid" column="BID" />
+		<result property="bno" column="BNO" />
+		<result property="btitle" column="BTITLE" />
+		<result property="bwriter" column="USERNAME" />
+		<result property="bcount" column="BCOUNT" />
+		<result property="bcontent" column="BCONTENT" />
+		<result property="boardfile" column="BOARDFILE" />
+		<result property="bdate" column="BDATE" />
+	</resultMap>
+	
+	<!-- 여러 쿼리 내용 중 중복해서 사용하는 문장이 있을 경우
+		 sql로 미리 선언하여 코드를 사전에 작성한 후
+		 필요한 경우 include 하여 사용할 수 있다. -->
+	<sql id="boardListSQL">
+		SELECT * FROM BOARD WHERE BTYPE = 1 AND STATUS = 'Y'
+	</sql>
+	
+	<select id="getListCount" resultType="_int">
+		SELECT COUNT(*) FROM BOARD WHERE BTYPE = 1 AND STATUS = 'Y'
+	</select>
+	
+	<select id="selectList" parameterType="hashMap" resultMap="resultBoard">
+		SELECT BO.*, (SELECT USERNAME FROM MEMBER WHERE USERID = BO.BWRITER) USERNAME FROM (SELECT ROWNUM RNUM, B.*
+        FROM (
+        <include refid="boardListSQL"/>
+              ORDER BY BID DESC) B
+        <!-- 부등호를 그냥 사용하면 시작 태그로 인식하기 떄문에 연산자로 인식하도록 CDATA영역을 설정하여야 한다. -->
+        <![CDATA[
+        
+     		WHERE ROWNUM <= #{endRow}) BO WHERE RNUM >= #{startRow}
+     		
+     	]]> 
+	</select>
+	
+	<select id="selectRowBounds" resultType="Board">
+		SELECT * FROM BOARD JOIN MEMBER ON (USERID = BWRITER)
+		WHERE BTYPE = 1 AND STATUS = 'Y'
+		ORDER BY BDATE DESC
+	</select>
+	
+	<insert id="insertBoard" parameterType="Board">
+		INSERT INTO BOARD VALUES(
+		SEQ_BID.NEXTVAL, 1, SEQ_BNO1.NEXTVAL,
+		#{btitle}, #{bcontent}, #{bwriter}, DEFAULT, #{boardfile}, DEFAULT, DEFAULT)
+	</insert>
+	
+	<select id="selectOne" parameterType="_int" resultMap="resultBoard">
+		SELECT BO.*,
+        (SELECT USERNAME FROM MEMBER WHERE USERID = BWRITER) USERNAME
+        FROM BOARD BO
+        WHERE BID = #{bid}
+	</select>
+	
+	<update id="updateBoard" parameterType="Board">
+		UPDATE BOARD SET 
+		BTITLE = #{btitle}, BCONTENT = #{bcontent}, 
+		BOARDFILE = #{boardfile} WHERE BID = #{bid}
+	</update>
+	
+	<update id="deleteBoard" parameterType="_int">
+		UPDATE BOARD SET STATUS = 'N' WHERE BID = #{bid}
+	</update>
+	
+	<select id="top5" resultMap="resultBoard">
+		SELECT *
+		FROM ( SELECT * FROM BOARD
+               JOIN MEMBER ON (BWRITER = USERID)
+               ORDER BY BCOUNT DESC, BTITLE, BDATE)
+        <![CDATA[
+		WHERE ROWNUM < 6
+		]]>
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
