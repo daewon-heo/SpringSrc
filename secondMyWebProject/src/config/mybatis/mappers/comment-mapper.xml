@@ -2,15 +2,41 @@
 <!DOCTYPE mapper PUBLIC
 "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mybatis_sample01.CityInfo">
+<mapper namespace="Comment_mapper">
 
-	<resultMap id="cityInfoResult" type="CityInfo">
-		<id property="name" column="Name" />
-		<result property="code" column="CountryCode" />
+	<resultMap id="resultComment" type="BoardComment">
+		<id property="cno" column="cno" />
+		<result property="bid" column="bid" />
+		<result property="ccontent" column="ccontent" />
+		<result property="cwriter" column="cwriter" />
+		<result property="cdate" column="cdate" />
+		<result property="refcno" column="refcno" />
+		<result property="clevel" column="clevel" />
+		<result property="cwriter" column="username" />
 	</resultMap>
 	
-	<select id="selectInfo" parameterType="int" resultType="CityInfo" resultMap="cityInfoResult">
-		SELECT * FROM WORLD.CITY WHERE ID = #{ID}
+	<insert id="insertComment" parameterType="BoardComment">
+		INSERT INTO BOARD_COMMENT VALUES(
+		SEQ_CNO.NEXTVAL, #{bid}, #{ccontent}, #{cwriter}, DEFAULT, #{refcno}, #{clevel})
+	</insert>
+	
+	<select id="selectList" parameterType="_int" resultMap="resultComment">
+		SELECT B.*, (SELECT USERNAME FROM MEMBER WHERE USERID = CWRITER) USERNAME
+  			 FROM BOARD_COMMENT B WHERE BID = #{bid}
+  			 START WITH CLEVEL = '1'
+			 CONNECT BY PRIOR  CNO = REFCNO
 	</select>
+	
+	<select id="selectOne" parameterType="_int" resultType="BoardComment">
+		SELECT * FROM BOARD_COMMENT WHERE BID = #{bid}
+	</select>
+	
+	<update id="updateComment" parameterType="BoardComment">
+		UPDATE BOARD_COMMENT SET CCONTENT = #{ccontent} WHERE CNO = #{cno}
+	</update>
+	
+	<update id="deleteComment" parameterType="_int">
+		DELETE FROM BOARD_COMMENT WHERE CNO = #{cno}
+	</update>
 
 </mapper>

@@ -279,7 +279,7 @@
 		}
 	</script>
 	</c:if><c:if test="${empty member}">
-		<c:url var="errorPage" value="../common/errorPage.jsp">
+		<c:url var="errorPage" value="views/common/errorPage.jsp">
 			<c:param name="msg" value="회원만 가능한 서비스 입니다."/>
 		</c:url>
 		<c:redirect url="${errorPage}"/>

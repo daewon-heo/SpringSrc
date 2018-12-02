@@ -8,17 +8,19 @@ import static com.kh.jsp.common.JDBCTemplate.*;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+import org.apache.ibatis.session.SqlSession;
+import static com.kh.jsp.common.MySqlSessionFactory.*;
 public class BoardCommentService {
 
 	private BoardCommentDao bcDao = new BoardCommentDao();
 	
 	public ArrayList<BoardComment> selectList(int bid){
 
-		Connection con = getConnection();
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		ArrayList<BoardComment> clist = bcDao.selectList(con, bid);
+		ArrayList<BoardComment> clist = bcDao.selectList(ses, bid);
 		
-		close(con);
+		ses.close();
 		
 		return clist;
 		
@@ -26,50 +28,50 @@ public class BoardCommentService {
 	
 	public int insertComment(BoardComment bco) {
 		
-		Connection con = getConnection();
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		int result = bcDao.insertComment(con, bco);
+		int result = bcDao.insertComment(ses, bco);
 		
-		if(result > 0) commit(con);
-		else rollback(con);
+		if(result > 0) ses.commit();
+		else ses.rollback();
 		
-		close(con);
+		ses.close();
 		
 		return result;
 	}
 
 	public BoardComment selectOne(int cno) {
-		Connection con = getConnection();
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		BoardComment bco = bcDao.selectOne(con, cno);
+		BoardComment bco = bcDao.selectOne(ses, cno);
 		
-		close(con);
+		ses.close();
 		
 		return bco;
 	}
 
 	public int updateComment(BoardComment bco) {
-		Connection con = getConnection();
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		int result = bcDao.updateComment(con, bco);
+		int result = bcDao.updateComment(ses, bco);
 		
-		if(result > 0) commit(con);
-		else rollback(con);
+		if(result > 0) ses.commit();
+		else ses.rollback();
 		
-		close(con);
+		ses.close();
 		
 		return result;
 	}
 	
 	public int deleteComment(int cno) {
-		Connection con = getConnection();
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
-		int result = bcDao.deleteComment(con, cno);
+		int result = bcDao.deleteComment(ses, cno);
 		
-		if(result > 0) commit(con);
-		else rollback(con);
+		if(result > 0) ses.commit();
+		else ses.rollback();
 		
-		close(con);
+		ses.close();
 		
 		return result;
 	}

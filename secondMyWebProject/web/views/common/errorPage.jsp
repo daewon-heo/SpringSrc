@@ -33,6 +33,7 @@ span {
 	<c:if test="${ !empty exception}">
 		<h3 style="color:hotpink;">에러명:: ${exception.message }</h3>
 	</c:if>
+		<h4><span>${fn:substring(param.msg, 0, 1) }</span>${fn:substring(param.msg,1, -1)}<br><br>
 		<h4><span>${fn:substring(msg,0,1)}</span>${fn:substring(msg,1,-1)}<br><br>
 		전송 값을 확인해 보시고, 이상이 없을 시 <br>
 		부서 담당자에게 연락하시기 바랍니다.</h4>

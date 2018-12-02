@@ -47,7 +47,7 @@
 		<mapper resource="config/mybatis/mappers/member-mapper.xml"/>
 		<mapper resource="config/mybatis/mappers/notice-mapper.xml"/>
 		<mapper resource="config/mybatis/mappers/board-mapper.xml"/>
-		<!-- <mapper resource="config/mybatis/mappers/comment-mapper.xml"/> -->
+		<mapper resource="config/mybatis/mappers/comment-mapper.xml"/>
 	</mappers>
 
 </configuration>
