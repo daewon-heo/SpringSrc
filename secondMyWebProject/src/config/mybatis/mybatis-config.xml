@@ -20,6 +20,10 @@
 		<typeAlias type="com.kh.jsp.board.model.vo.Board" alias="Board" />
 		<typeAlias type="com.kh.jsp.boardComment.model.vo.BoardComment"
 			     alias="BoardComment" />
+		<typeAlias type="com.kh.jsp.thumbnail.model.vo.Thumbnail" 
+				 alias="Thumbnail"/>
+		<typeAlias type="com.kh.jsp.thumbnail.model.vo.Attachment" 
+				 alias="Attachment"/>				 
 	</typeAliases>
 	
 	<!-- 접속할 DB들의 환경 설정을 등록하는 태그 -->
@@ -48,6 +52,7 @@
 		<mapper resource="config/mybatis/mappers/notice-mapper.xml"/>
 		<mapper resource="config/mybatis/mappers/board-mapper.xml"/>
 		<mapper resource="config/mybatis/mappers/comment-mapper.xml"/>
+		<mapper resource="config/mybatis/mappers/thumbnail-mapper.xml"/>
 	</mappers>
 
 </configuration>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Thumbnail_mapper">
+
+	<resultMap type="Thumbnail" id="resultThumbnail">
+		<id property="bid" column="bid"/>
+		<result property="bno" column="bno"/>
+		<result property="btitle" column="btitle"/>
+		<result property="bwriter" column="username"/>
+		<result property="bcount" column="bcount"/>
+		<result property="bdate" column="bdate"/>
+		<result property="boardfile" column="changename"/>
+	</resultMap>
+	
+	<resultMap type="Thumbnail" id="resultThumbnailOne">
+		<id property="bid" column="bid"/>
+		<result property="bno" column="bno"/>
+		<result property="btitle" column="btitle"/>
+		<result property="bwriter" column="username"/>
+		<result property="bcontent" column="BCONTENT"/>
+		<result property="bcount" column="bcount"/>
+		<result property="bdate" column="bdate"/>
+		<collection property="attachments" ofType="Attachment" 
+		column="BID" resultMap="resultAttachment"/>
+	</resultMap>
+	
+	<resultMap id="resultAttachment" type="Attachment">
+		<id property="fno" column="FNO"/>
+		<result property="bid" column="BID"/>
+		<result property="originName" column="ORIGINNAME"/>
+		<result property="changeName" column="CHANGENAME"/>
+		<result property="uploadDate" column="UPLOADDATE"/>
+		<result property="fileLevel" column="FILELEVEL"/>
+		<result property="filePath" column="FILEPATH"/>
+		<result property="downloadCount" column="DOWNLOADCOUNT"/>
+	</resultMap>
+
+	<sql id="selectThumbnailSQL">
+		SELECT B.*, A.*, M.USERNAME FROM BOARD B
+		JOIN ATTACHMENT A ON (B.BID = A.BID)
+		JOIN MEMBER M ON (B.BWRITER = M.USERID)
+		WHERE B.STATUS = 'Y' AND A.DELFLAG = 'Y'
+	</sql>
+	
+	<select id="selectList" resultMap="resultThumbnail">
+		<include refid="selectThumbnailSQL"/>
+		AND FILELEVEL = 0
+	</select>
+	
+	<update id="updateCount" parameterType="_int">
+		UPDATE BOARD SET BCOUNT = BCOUNT + 1 WHERE BID = #{bid}
+	</update>
+	
+	<select id="selectThumbnailOne" parameterType="_int" resultMap="resultThumbnailOne">
+		<include refid="selectThumbnailSQL"/>
+		AND B.BID = #{bid}
+	</select>
+	
+	<insert id="insertThumbnail" parameterType="Thumbnail">
+		INSERT ALL
+			INTO BOARD VALUES(SEQ_BID.NEXTVAL, 2, SEQ_BNO2.NEXTVAL,
+			#{btitle}, #{bcontent}, #{bwriter}, DEFAULT,
+			NULL, DEFAULT, DEFAULT)
+		<if test="attachments != null">
+			<foreach collection="attachments" 
+					 item="att" index="idx">
+				INTO ATTACHMENT VALUES(SEQ_FNO.NEXTVAL + #{idx},
+				SEQ_BID.CURRVAL, #{att.originName},
+				#{att.changeName},
+				#{att.filePath}, SYSDATE,
+				<choose>
+					<when test="idx==0">
+					0,	
+					</when>
+					<otherwise>
+					1,
+					</otherwise>
+				</choose>
+				DEFAULT, DEFAULT)
+			</foreach>
+		</if>
+		SELECT * FROM DUAL
+	</insert>
+	
+	<update id="updateThumbnailContent" parameterType="Thumbnail">
+		UPDATE BOARD SET BTITLE = #{btitle}, BCONTENT = #{bcontent} WHERE BID = #{bid}
+	</update>
+	
+	<update id="updateAttachment" parameterType="ArrayList">
+		<foreach collection="list">
+			UPDATE ATTACHMENT SET ORIGINNAME = ?, CHANGENAME = ? WHERE FNO = ?	
+		</foreach>
+	</update>
+
+</mapper>

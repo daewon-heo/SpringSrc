@@ -16,8 +16,15 @@
 	</resultMap>
 	
 	<insert id="insertComment" parameterType="BoardComment">
-		INSERT INTO BOARD_COMMENT VALUES(
-		SEQ_CNO.NEXTVAL, #{bid}, #{ccontent}, #{cwriter}, DEFAULT, #{refcno}, #{clevel})
+		INSERT INTO BOARD_COMMENT VALUES(SEQ_CNO.NEXTVAL, #{bid}, #{ccontent}, #{cwriter}, DEFAULT,
+		<if test="refcno == 0">
+			NULL
+		</if> 
+		<if test="refcno != 0">
+			#{refcno}
+		</if> 
+		 ,
+		#{clevel})
 	</insert>
 	
 	<select id="selectList" parameterType="_int" resultMap="resultComment">

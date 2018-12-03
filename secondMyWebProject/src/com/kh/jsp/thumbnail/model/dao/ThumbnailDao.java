@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Properties;
 
+import org.apache.ibatis.session.SqlSession;
+
 import static com.kh.jsp.common.JDBCTemplate.*;
 
 import com.kh.jsp.thumbnail.model.vo.Attachment;
@@ -37,71 +39,15 @@ public class ThumbnailDao {
 		
 	}
 	
-	public ArrayList<Thumbnail> selectList(Connection con) {
+	public ArrayList<Thumbnail> selectList(SqlSession ses) {
 		
-		Statement stmt = null;
-		ArrayList<Thumbnail> list = null;
-		ResultSet rset = null;
-		
-		String sql = prop.getProperty("selectList");
-		
-		try {
-			stmt = con.createStatement();
-		
-			rset = stmt.executeQuery(sql);
-			
-			list = new ArrayList<Thumbnail>();
-			
-			while(rset.next()){
-				Thumbnail t = new Thumbnail();
-				
-				t.setBid(rset.getInt("BID"));
-				t.setBno(rset.getInt("BNO"));
-				t.setBtitle(rset.getString("BTITLE"));
-				t.setBwriter(rset.getString("USERNAME"));
-				t.setBcount(rset.getInt("BCOUNT"));
-				t.setBdate(rset.getDate("BDATE"));
-				t.setBoardfile(rset.getString("CHANGENAME"));
-				
-				list.add(t);
-			}
-			
-		} catch (SQLException e) {
-		 
-			e.printStackTrace();
-			
-		} finally {
-			
-			close(rset);
-			close(stmt);
-		}
-		
-		return list;
+		return new ArrayList<Thumbnail>(
+				ses.selectList("Thumbnail_mapper.selectList"));
 	}
 
-	public int insertThumbnailContent(Connection con, Thumbnail t) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	public int insertThumbnailContent(SqlSession ses, Thumbnail t) {
 		
-		String sql = prop.getProperty("insertThumbnail");
-		
-		try {
-			pstmt = con.prepareStatement(sql);
-		
-			pstmt.setString(1, t.getBtitle());
-			pstmt.setString(2, t.getBcontent());
-			pstmt.setString(3, t.getBwriter());
-			pstmt.setNull(4,  Types.NULL);
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+		return ses.insert("Thumbnail_mapper.insertThumbnail", t);
 	}
 
 	public int selectCurrentBid(Connection con) {
@@ -170,138 +116,37 @@ public class ThumbnailDao {
 		return result;
 	}
 
-	public HashMap<String, Object> selectThumbnailMap(Connection con, int bid) {
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
-		HashMap<String, Object> hmap = null;
-		Thumbnail t = null;
-		Attachment at = null;
-		ArrayList<Attachment> list = null;
+	public HashMap<String, Object> selectThumbnailMap(SqlSession ses, int bid) {
 		
-		String query = prop.getProperty("selectThumbnailOne");
-				
-		try {
-			pstmt = con.prepareStatement(query);
-			pstmt.setInt(1, bid);
-			
-			rset = pstmt.executeQuery();
-			
-			list = new ArrayList<Attachment>();
-			
-			//System.out.println(rset.getArray(1));
-			
-			while(rset.next()){
-				
-				t = new Thumbnail();
-				t.setBid(bid);
-				t.setBno(rset.getInt("bno"));
-				t.setBtitle(rset.getString("btitle"));
-				t.setBcontent(rset.getString("bcontent"));
-				t.setBwriter(rset.getString("username"));
-				t.setBcount(rset.getInt("bcount"));
-				t.setBdate(rset.getDate("bdate"));
-				
-				at = new Attachment();
-				at.setFno(rset.getInt("fno"));
-				at.setOriginName(rset.getString("originname"));
-				at.setChangeName(rset.getString("changename"));
-				at.setFilePath(rset.getString("filepath"));
-				at.setUploadDate(rset.getDate("uploaddate"));
-				
-				System.out.println(at);
-				
-				list.add(at);
-				
-			}
-			hmap = new HashMap<String, Object>();
-			
+		HashMap<String, Object> hmap = new HashMap<String, Object>();
+		
+		Thumbnail t = ses.selectOne(
+				"Thumbnail_mapper.selectThumbnailOne", bid);
+		
+		ArrayList<Attachment> list = t.getAttachments();
+		
+		if( t!= null){
 			hmap.put("thumbnail", t);
 			hmap.put("attachment", list);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(rset);
-			close(pstmt);
 		}
 		
 		return hmap;
 	}
 
-	public int updateCount(Connection con, int bid) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	// 게시글 조회수 증가용
+	public int updateCount(SqlSession ses, int bid) {
 		
-		String sql = prop.getProperty("updateCount");
-		
-		try{
-			
-			pstmt = con.prepareStatement(sql);
-				
-			pstmt.setInt(1, bid);
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+		return ses.update("Thumbnail_mapper.updateCount", bid);
 	}
 
-	public int updateThumbnailContent(Connection con, Thumbnail t) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	public int updateThumbnailContent(SqlSession ses, Thumbnail t) {
 		
-		String sql = prop.getProperty("updateThumbnail");
-		
-		try {
-			pstmt = con.prepareStatement(sql);
-		
-			pstmt.setString(1, t.getBtitle());
-			pstmt.setString(2, t.getBcontent());
-			pstmt.setInt(3,  t.getBid());
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+		return ses.update("Thumbnail_mapper.updateThumbnailContent", t);
 	}
 
-	public int updateAttachment(Connection con, ArrayList<Attachment> list) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	public int updateAttachment(SqlSession ses, ArrayList<Attachment> list) {
 		
-		String sql = prop.getProperty("updateAttachment");
-		
-		try{
-			
-			for(int i = 0 ; i < list.size(); i++){
-				
-				pstmt = con.prepareStatement(sql);
-				
-				pstmt.setString(1, list.get(i).getOriginName());
-				pstmt.setString(2, list.get(i).getChangeName());
-				pstmt.setInt(3, list.get(i).getFno());
-				
-				result += pstmt.executeUpdate();
-				
-			}
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+		return ses.update("Thumbnail_mapper.updateAttachment", list);
 	}
 
 	public int deleteThumbnail(Connection con, int bid) {
