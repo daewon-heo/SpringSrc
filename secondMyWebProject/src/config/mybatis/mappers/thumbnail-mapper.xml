@@ -88,10 +88,16 @@
 		UPDATE BOARD SET BTITLE = #{btitle}, BCONTENT = #{bcontent} WHERE BID = #{bid}
 	</update>
 	
-	<update id="updateAttachment" parameterType="ArrayList">
-		<foreach collection="list">
-			UPDATE ATTACHMENT SET ORIGINNAME = ?, CHANGENAME = ? WHERE FNO = ?	
-		</foreach>
+	<update id="updateAttachment" parameterType="Attachment">
+		UPDATE ATTACHMENT SET ORIGINNAME = #{originName}, CHANGENAME = #{changeName} WHERE FNO = #{fno}
+	</update>
+	
+	<update id="deleteThumbnail" parameterType="_int">
+		UPDATE BOARD SET STATUS = 'N' WHERE BID = #{bid}
+	</update>
+	
+	<update id="deleteAttachment" parameterType="_int">
+		UPDATE ATTACHMENT SET DELFLAG = 'N' WHERE BID = #{bid}
 	</update>
 
 </mapper>

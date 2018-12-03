@@ -98,23 +98,23 @@ public class ThumbnailService {
 	}
 
 	public int deleteThumbnail(int bid) {
-		Connection con = getConnection();
+		SqlSession ses = getSqlSessionFactory().openSession(false);
 		
 		int result = 0, result1 = 0, result2 = 0;
 		
-		result1 = tDao.deleteThumbnail(con, bid);
+		result1 = tDao.deleteThumbnail(ses, bid);
 		
 		if(result1 > 0){
-			result2 = tDao.deleteAttachment(con, bid);
+			result2 = tDao.deleteAttachment(ses, bid);
 		}
 		
 		if( result1 > 0 && result2 > 0) {
-			commit(con);
+			ses.commit();
 			result = 1;
 			
-		} else rollback(con);
+		} else ses.rollback();
 		
-		close(con);
+		ses.close();
 		
 		return result;
 	}

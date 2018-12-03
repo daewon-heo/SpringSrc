@@ -145,52 +145,23 @@ public class ThumbnailDao {
 	}
 
 	public int updateAttachment(SqlSession ses, ArrayList<Attachment> list) {
+		int result = 0;
 		
-		return ses.update("Thumbnail_mapper.updateAttachment", list);
+		for (Attachment attachment : list) {
+			result += ses.update("Thumbnail_mapper.updateAttachment", attachment);
+		}
+		
+		return result;
 	}
 
-	public int deleteThumbnail(Connection con, int bid) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	public int deleteThumbnail(SqlSession ses, int bid) {
 		
-		String sql = prop.getProperty("deleteThumbnail");
-		
-		try{
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setInt(1, bid);
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+		return ses.update("Thumbnail_mapper.deleteThumbnail",bid);
 	}
 	
-	public int deleteAttachment(Connection con, int bid) {
-		PreparedStatement pstmt = null;
-		int result = 0;
+	public int deleteAttachment(SqlSession ses, int bid) {
 		
-		String sql = prop.getProperty("deleteAttachment");
-		
-		try{
-			pstmt = con.prepareStatement(sql);
-			
-			pstmt.setInt(1, bid);
-			
-			result = pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
-		
-		return result;
+		return ses.update("Thumbnail_mapper.deleteAttachment", bid);
 	}
 }
 
