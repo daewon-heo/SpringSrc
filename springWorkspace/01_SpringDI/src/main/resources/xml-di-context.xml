@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 객체의 의존성을 주입(객체를 생성하는 목적의) XML문서-->
+	<!-- 생성자를 통한 의존성 주입 -->
+	<bean id="job" class="com.kh.spring.di.xml.vo.Doctor"/>
+	<bean id="person1" class="com.kh.spring.di.xml.vo.Person">
+		<constructor-arg index="0" value="홍길동"/>
+		<constructor-arg index="1" ref="job"/>
+	</bean>
+
+	
+	<!-- Setter를 통한 의존성 주입 -->
+	<bean id="job2" class="com.kh.spring.di.xml.vo.Developer"/>
+	<bean id="person2" class="com.kh.spring.di.xml.vo.Person">
+		<property name="name" value="김유신"></property>
+		<property name="myJob" ref="job2"></property>
+	</bean>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 이 XML 파일은 자바 Bean(자바 객체)을 만드는 공간이다. 
+		 스프링에서 필요한 객체를 여기에 미리 선언 한 뒤,
+		 서버 실행 시에 스프링 컨테이너에 의해 생성된다.
+		 (서버 실행과 동시에 XML문서를 읽어 관련 객체를 미리 등록한다.) -->
+		 
+<!-- bean 객체 생성하기 -->
+<!-- <bean id="생성하고자 하는 객체 명" class="생성하고자 하는 객체의 클래스"> -->
+	<bean id="lg" class="com.kh.spring.di.model.vo.LgTV"/>
+	<bean id="samsung" class="com.kh.spring.di.model.vo.SamsungTV"/>
+	
+	<!-- 스프링 컨테이너에서 사용하기 위해 등록하는 객체 -->
+	<bean id="tvmgr" class="com.kh.spring.di.model.vo.TvMgr">
+		<property name="tv" ref="samsung"/>
+	</bean>
+
+</beans>

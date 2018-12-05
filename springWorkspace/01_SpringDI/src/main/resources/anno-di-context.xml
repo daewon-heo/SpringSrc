@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- @Component 로 등록한 객체들은
+		해당 범위만 지정하면 자동으로 스프링에서 스캔하여 등록한다. -->
+		
+	<!-- 선언할 객체 범위 지정 -->
+	<context:component-scan base-package="com.kh.spring.di.anno"/>
+</beans>
