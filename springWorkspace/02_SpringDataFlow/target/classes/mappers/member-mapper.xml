@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Member_mapper">
+
+	<resultMap id="resultMember" type="Member">
+		<id property="userId" column="userid" />
+		<result property="password" column="password" />
+		<result property="userName" column="username" />
+	</resultMap>
+	
+	<select id="loginMember" parameterType="Member" resultMap="resultMember">
+		SELECT * FROM MEMBER
+		WHERE USERID = #{userId} AND PASSWORD = #{password}
+	</select>
+
+</mapper>
