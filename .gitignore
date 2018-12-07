@@ -27,3 +27,5 @@ secondMyWebProject/.settings/org.eclipse.wst.jsdt.ui.superType.container
 secondMyWebProject/.settings/org.eclipse.wst.jsdt.ui.superType.name
 *.PNG
 *.PNG
+springWorkspace/02_SpringDataFlow/target/m2e-wtp/web-resources/META-INF/maven/com.kh/spring/pom.properties
+*/target/*
