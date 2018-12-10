@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC
+"-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+	<!-- VO 객체를 위한 별칭 선언부-->
+		<typeAlias type="com.kh.spring.dev.model.vo.Dev" alias="Dev"/>
+		<typeAlias type="com.kh.spring.common.StringArrayTypeHandler"
+			alias="strArrTypeHandler"/>
+	</typeAliases>
+	
+	<!-- 문자열 배열을 일반 문자열로 변환하는 타입 핸들러 등록 -->
+	<typeHandlers>
+		<package name="com.kh.spring.common"/>
+	</typeHandlers>
+</configuration>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dev">
+
+	<!-- 자바의 배열이나 서로 다른 (자바와 DB의 컬럼 내용이 다른)
+		객체가 있을 경우, typeHandler 객체를 통해 원하는 자료형으로 변환이 가능하다. -->
+	<resultMap type="Dev" id="resultDev">
+		<result property="devLang" column="devlang"
+		 typeHandler="strArrTypeHandler"/>
+	</resultMap>
+	
+	<select id="selectList" resultMap="resultDev">
+		SELECT * FROM DEV ORDER BY 1 DESC
+	</select>
+	<select id="selectDev" parameterType="_int" resultMap="resultDev">
+		
+		SELECT * FROM DEV WHERE DEVNO = #{devno}
+		
+	</select>
+	
+	<insert id="insertDev">
+		insert into dev values(seq_dev_no.nextval,#{devName},#{devAge},#{devEmail},#{devGender},#{devLang, typeHandler=strArrTypeHandler})
+	</insert>
+	
+	<update id="updateDev" parameterType="dev">
+		update dev set devName = #{devName}, devAge = #{devAge}, devEmail = #{devEmail}, devGender = #{devGender}, devLang = #{devLang, typeHandler=strArrTypeHandler} where devNo = #{devNo}
+	</update>
+	
+	<delete id="deleteDev" parameterType="_int"> 
+		delete from dev where devno=#{no} 
+	</delete>
+
+</mapper>
