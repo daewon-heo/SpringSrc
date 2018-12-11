@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Namespace 는 실제 마이바티스를 통해
+    SQL에 접근할 때 사용하는 매퍼 파일의 별칭이다. 
+    보통 서비스의 이름과 같게 설정하여
+    연결의 착오를 줄인다. -->
+<mapper namespace="member">
+
+	<resultMap type="Member" id="memberMap">
+		<result column="hobby" property="hobby" typeHandler="strArrTypeHandler"/>
+	</resultMap>
+	<select id="loginMember" parameterType="string" 
+	       resultMap="memberMap">
+	SELECT * FROM MEMBER 
+	WHERE USERID = #{userId}
+	</select>
+	
+	<insert id="insertMember" parameterType="Member">
+		INSERT INTO MEMBER VALUES(
+			#{userId}, #{password}, #{userName},
+			#{gender}, #{age}, #{email}, #{phone},
+			#{address}, #{hobby, typeHandler=strArrTypeHandler}, DEFAULT
+		)
+	</insert>
+	
+	<update id="updateMember" parameterType="Member">
+		UPDATE MEMBER 
+		SET PASSWORD = #{password},
+		EMAIL = #{email}, 
+		AGE = #{age}, 
+		PHONE = #{phone}, 
+		ADDRESS = #{address}, 
+		HOBBY = #{hobby, typeHandler=strArrTypeHandler}
+		WHERE USERID = #{userId}
+	</update>
+	
+	<delete id="deleteMember" parameterType="string">
+		DELETE FROM MEMBER WHERE USERID = #{userId}
+	</delete>
+	
+	<select id="checkIdDuplicate" statementType="CALLABLE" 
+	       parameterType="hashmap">
+		<!-- CallableStatement 는 { } 로 묶여 실행되며
+		    시작괄호 '{' 다음에 tab 기호를 읽지 못한다. -->
+		{ CALL ID_DUP_CHK(
+			#{userId, mode=IN, jdbcType=VARCHAR},
+			#{result, mode=OUT, jdbcType=NUMERIC,
+			  javaType=integer}
+			)
+		}
+	</select>
+<!--
+
+// 아이디 체크 프로시저
+CREATE OR REPLACE PROCEDURE ID_DUP_CHK
+( V_ID IN MEMBER.USERID%TYPE,
+  PR_RESULT OUT NUMBER)
+  IS
+  BEGIN
+     SELECT COUNT(*) INTO PR_RESULT
+     FROM MEMBER
+     WHERE USERID = V_ID;
+  END;
+  /
+  
+// 컴파일 결과 확인
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+     RESULT NUMBER;
+BEGIN
+     ID_DUP_CHK('admina', RESULT);
+     DBMS_OUTPUT.PUT_LINE('RESULT :: ' || RESULT);
+END;
+/
+-->
+</mapper>
+
+
+
+
+
+
+

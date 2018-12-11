@@ -6,6 +6,7 @@
 	<typeAliases>
 	<!-- VO 객체를 위한 별칭 선언부-->
 		<typeAlias type="com.kh.spring.dev.model.vo.Dev" alias="Dev"/>
+		<typeAlias type="com.kh.spring.member.model.vo.Member" alias="Member"/>
 		<typeAlias type="com.kh.spring.common.StringArrayTypeHandler"
 			alias="strArrTypeHandler"/>
 	</typeAliases>
