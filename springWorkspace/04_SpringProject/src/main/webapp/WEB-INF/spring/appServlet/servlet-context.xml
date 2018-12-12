@@ -49,6 +49,23 @@
 		</beans:property>
 	</beans:bean>
 	
+	<!-- interceptor 태그를 사용하여 dispatcherServlet이 동작 시에 
+		함께 엮여서 동작하도록 작성한 클래스를 등록할 수 있다.-->
+		
+	<interceptors>
+		<interceptor>
+			<!-- 모든 url 경로에 대해 동작시키겠다 -->
+				<mapping path="/**/"/>
+				<beans:bean id="interceptor" class="com.kh.spring.common.interceptor.LoggerInterceptor"/>
+		</interceptor>
+		<interceptor>
+			<mapping path="/member/memberView.do"/>
+			<mapping path="/member/memberUpdate.do"/>
+			<beans:bean id="loginCheckInterceptor"
+					class="com.kh.spring.common.interceptor.LogincheckInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>		
+	
 	<context:component-scan base-package="com.kh.spring" />
 	
 	
