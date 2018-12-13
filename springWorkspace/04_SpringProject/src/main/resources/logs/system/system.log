@@ -1,58 +1,10 @@
-INFO :[2018-12-12 10:45:30] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 10:45:32] ContextLoader.java:306 - Root WebApplicationContext initialized in 2174 ms
-INFO :[2018-12-12 10:45:33] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 10:45:36] FrameworkServlet.java:546 - Completed initialization in 3240 ms
-INFO :[2018-12-12 10:48:47] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 10:48:49] ContextLoader.java:306 - Root WebApplicationContext initialized in 2095 ms
-INFO :[2018-12-12 10:48:49] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 10:48:52] FrameworkServlet.java:546 - Completed initialization in 2939 ms
-INFO :[2018-12-12 10:50:00] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 10:50:02] ContextLoader.java:306 - Root WebApplicationContext initialized in 1960 ms
-INFO :[2018-12-12 10:50:02] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 10:50:05] FrameworkServlet.java:546 - Completed initialization in 2594 ms
-INFO :[2018-12-12 12:19:33] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 12:19:35] ContextLoader.java:306 - Root WebApplicationContext initialized in 2005 ms
-INFO :[2018-12-12 12:19:35] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 12:19:38] FrameworkServlet.java:546 - Completed initialization in 2756 ms
-INFO :[2018-12-12 12:24:59] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 12:25:01] ContextLoader.java:306 - Root WebApplicationContext initialized in 2162 ms
-INFO :[2018-12-12 12:25:01] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 12:25:04] FrameworkServlet.java:546 - Completed initialization in 3023 ms
-DEBUG:[2018-12-12 12:25:13] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-12 12:25:13] LoggerInterceptor.java:26 - /member/memberLogin.do
-DEBUG:[2018-12-12 12:25:13] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-12 12:25:14] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-12 12:25:14] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-12 12:26:53] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 12:26:56] ContextLoader.java:306 - Root WebApplicationContext initialized in 2451 ms
-INFO :[2018-12-12 12:26:56] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 12:26:59] FrameworkServlet.java:546 - Completed initialization in 3141 ms
-DEBUG:[2018-12-12 12:27:04] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-12 12:27:04] LoggerInterceptor.java:26 - /member/memberLogout.do
-DEBUG:[2018-12-12 12:27:04] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-12 12:27:04] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-12 12:27:04] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-12 12:27:10] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-12 12:27:10] LoggerInterceptor.java:26 - /member/memberLogin.do
-DEBUG:[2018-12-12 12:27:10] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-12 12:27:12] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-12 12:27:12] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-12 12:40:16] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-12 12:40:18] ContextLoader.java:306 - Root WebApplicationContext initialized in 2088 ms
-INFO :[2018-12-12 12:40:19] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-12 12:40:22] FrameworkServlet.java:546 - Completed initialization in 3122 ms
-DEBUG:[2018-12-12 12:40:32] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-12 12:40:32] LoggerInterceptor.java:26 - /member/memberView.do
-DEBUG:[2018-12-12 12:40:32] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-12 12:40:32] LogincheckInterceptor.java:28 - 비로그인 상태에서 [/member/memberView.do]로 접근하였습니다!
-DEBUG:[2018-12-12 12:40:32] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-12 12:40:40] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-12 12:40:40] LoggerInterceptor.java:26 - /member/memberUpdate.do
-DEBUG:[2018-12-12 12:40:40] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-12 12:40:40] LogincheckInterceptor.java:28 - 비로그인 상태에서 [/member/memberUpdate.do]로 접근하였습니다!
-DEBUG:[2018-12-12 12:40:40] LoggerInterceptor.java:44 - =================== END =====================
+INFO :[2018-12-13 09:23:24] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 09:23:26] ContextLoader.java:306 - Root WebApplicationContext initialized in 2215 ms
+INFO :[2018-12-13 09:23:26] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 09:23:30] FrameworkServlet.java:546 - Completed initialization in 4160 ms
+DEBUG:[2018-12-13 09:23:39] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-13 09:23:39] LoggerInterceptor.java:26 - /member/memberLogin.do
+DEBUG:[2018-12-13 09:23:39] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-13 09:23:40] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-13 09:23:41] LoggerInterceptor.java:44 - =================== END =====================
 

@@ -6,13 +6,24 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- Root Context : 웹서버 전체 설정과 관련된 내용을 작성하는 XML 파일 -->
 	<!-- DataSource : 연결하고자 하는 DB설정을 담당하는 객체 -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+	<bean id="realDataSource" class="org.apache.commons.dbcp.BasicDataSource" 
 		destroy-method="close">
       <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
       <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
       <property name="username" value="SPRING"/>
       <property name="password" value="SPRING"/>
    </bean>
+   
+   <!-- log4jdbc용 연결 객체 -->
+   	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="realDataSource"/>
+		<property name="logFormatter">
+		<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+			<property name="loggingType" value="MULTI_LINE"/>
+			<property name="sqlPrefix" value="[SQL] "/>
+		</bean>
+		</property>
+	</bean>
    
    <!-- Mybatis 연동 설정 -->
     <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
