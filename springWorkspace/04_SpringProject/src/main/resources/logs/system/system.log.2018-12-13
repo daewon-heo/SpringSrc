@@ -1,0 +1,642 @@
+INFO :[2018-12-13 09:23:24] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 09:23:26] ContextLoader.java:306 - Root WebApplicationContext initialized in 2215 ms
+INFO :[2018-12-13 09:23:26] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 09:23:30] FrameworkServlet.java:546 - Completed initialization in 4160 ms
+DEBUG:[2018-12-13 09:23:39] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-13 09:23:39] LoggerInterceptor.java:26 - /member/memberLogin.do
+DEBUG:[2018-12-13 09:23:39] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-13 09:23:40] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-13 09:23:41] LoggerInterceptor.java:44 - =================== END =====================
+
+INFO :[2018-12-13 12:34:55] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 12:34:57] ContextLoader.java:306 - Root WebApplicationContext initialized in 1892 ms
+INFO :[2018-12-13 12:34:57] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 12:35:01] FrameworkServlet.java:546 - Completed initialization in 3581 ms
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:26 - 메소드명 : memo
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:44 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:35:03] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:44 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:03] LoggerAspect.java:44 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:05] LoggerAspect.java:48 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:05] LoggerAspect.java:48 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:05] LoggerAspect.java:48 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:44 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 12:35:07] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:44 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:44 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:48 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:48 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:48 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:26 - 메소드명 : memo
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:44 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:35:07] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:44 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:44 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:48 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:48 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:07] LoggerAspect.java:48 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:44 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 12:35:09] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:44 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:44 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:48 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:48 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:48 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:26 - 메소드명 : memo
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:44 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:35:09] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:44 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:44 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:48 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:48 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:09] LoggerAspect.java:48 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:44 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 12:35:12] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:44 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:26 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:44 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:48 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:48 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:48 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:26 - 메소드명 : memo
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:44 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:35:12] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:44 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:44 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:48 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:48 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:12] LoggerAspect.java:48 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.deleteMemo(String,String)
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:26 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:44 - [Before] Controller :: deleteMemo
+DEBUG:[2018-12-13 12:35:14] MemoController.java:53 - 메모 삭제
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.deleteMemo(Map)
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:26 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:44 - [Before] Service :: deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:18 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.deleteMemo(Map)
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:26 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:44 - [Before] Dao :: deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:48 - [After] Dao :: deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:48 - [After] Service :: deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:48 - [After] Controller :: deleteMemo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:18 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:22 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:26 - 메소드명 : memo
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:44 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:35:14] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:22 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:44 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:14 - 선언적 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:18 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:22 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:26 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:44 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:48 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:48 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:35:14] LoggerAspect.java:48 - [After] Controller :: memo
+INFO :[2018-12-13 12:49:20] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 12:49:22] ContextLoader.java:306 - Root WebApplicationContext initialized in 2219 ms
+INFO :[2018-12-13 12:49:22] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 12:49:26] FrameworkServlet.java:546 - Completed initialization in 3913 ms
+DEBUG:[2018-12-13 12:49:26] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:26] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:49:26] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:26] LoggerAspect.java:51 - 메소드명 : memo
+DEBUG:[2018-12-13 12:49:26] LoggerAspect.java:68 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:49:27] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:68 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:27] LoggerAspect.java:68 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:28] LoggerAspect.java:72 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:28] LoggerAspect.java:72 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:28] LoggerAspect.java:72 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:51 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:68 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 12:49:31] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:43 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:51 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:68 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:43 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:51 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:68 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:72 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:72 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:72 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:51 - 메소드명 : memo
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:68 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:49:31] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:68 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:68 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:72 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:72 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:31] LoggerAspect.java:72 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:51 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:68 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 12:49:33] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:43 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:51 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:68 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:43 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:51 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:68 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:72 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:72 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:72 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:51 - 메소드명 : memo
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:68 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:49:33] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:68 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:68 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:72 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:72 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:33] LoggerAspect.java:72 - [After] Controller :: memo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.deleteMemo(String,String)
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:51 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:68 - [Before] Controller :: deleteMemo
+DEBUG:[2018-12-13 12:49:36] MemoController.java:53 - 메모 삭제
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:43 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.deleteMemo(Map)
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:51 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:68 - [Before] Service :: deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:43 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.deleteMemo(Map)
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:51 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:68 - [Before] Dao :: deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:72 - [After] Dao :: deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:72 - [After] Service :: deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:72 - [After] Controller :: deleteMemo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:43 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:47 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:51 - 메소드명 : memo
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:68 - [Before] Controller :: memo
+DEBUG:[2018-12-13 12:49:36] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:47 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:68 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:39 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:43 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:47 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:51 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:68 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:72 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:72 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 12:49:36] LoggerAspect.java:72 - [After] Controller :: memo
+INFO :[2018-12-13 13:13:13] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 13:13:15] ContextLoader.java:306 - Root WebApplicationContext initialized in 1859 ms
+INFO :[2018-12-13 13:13:15] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 13:13:19] FrameworkServlet.java:546 - Completed initialization in 3695 ms
+DEBUG:[2018-12-13 13:13:21] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:21] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 13:13:21] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:52 - 메소드명 : memo
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:69 - [Before] Controller :: memo
+DEBUG:[2018-12-13 13:13:22] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:69 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:22] LoggerAspect.java:69 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:23] LoggerAspect.java:73 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:23] LoggerAspect.java:73 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:23] LoggerAspect.java:73 - [After] Controller :: memo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:69 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 13:13:27] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:69 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:69 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:73 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:73 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:73 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:52 - 메소드명 : memo
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:69 - [Before] Controller :: memo
+DEBUG:[2018-12-13 13:13:27] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:69 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:69 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:73 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:73 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:27] LoggerAspect.java:73 - [After] Controller :: memo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:69 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 13:13:29] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:69 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:69 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:73 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:73 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:73 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:52 - 메소드명 : memo
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:69 - [Before] Controller :: memo
+DEBUG:[2018-12-13 13:13:29] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:69 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:69 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:73 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:73 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:29] LoggerAspect.java:73 - [After] Controller :: memo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.insertMemo(String,String)
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:69 - [Before] Controller :: insertMemo
+DEBUG:[2018-12-13 13:13:33] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.insertMemo(Map)
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:69 - [Before] Service :: insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.insertMemo(Map)
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:52 - 메소드명 : insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:69 - [Before] Dao :: insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:73 - [After] Dao :: insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:73 - [After] Service :: insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:73 - [After] Controller :: insertMemo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:52 - 메소드명 : memo
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:69 - [Before] Controller :: memo
+DEBUG:[2018-12-13 13:13:33] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:69 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:69 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:73 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:73 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:33] LoggerAspect.java:73 - [After] Controller :: memo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.deleteMemo(String,String)
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:52 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:69 - [Before] Controller :: deleteMemo
+DEBUG:[2018-12-13 13:13:36] MemoController.java:53 - 메모 삭제
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.service.MemoService.deleteMemo(Map)
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:52 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:69 - [Before] Service :: deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:44 - 시그니쳐 내용 : int com.kh.spring.memo.model.dao.MemoDao.deleteMemo(Map)
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:52 - 메소드명 : deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:69 - [Before] Dao :: deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:73 - [After] Dao :: deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:73 - [After] Service :: deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:73 - [After] Controller :: deleteMemo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:44 - 시그니쳐 내용 : String com.kh.spring.memo.controller.MemoController.memo(Model)
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:48 - type : com.kh.spring.memo.controller.MemoController
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:52 - 메소드명 : memo
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:69 - [Before] Controller :: memo
+DEBUG:[2018-12-13 13:13:36] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.service.MemoService.selectMemoList()
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:48 - type : com.kh.spring.memo.model.service.MemoService
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:69 - [Before] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:40 - 프로그래밍적 선언 형태의 AOP입니다.
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:44 - 시그니쳐 내용 : List com.kh.spring.memo.model.dao.MemoDao.selectMemoList()
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:48 - type : com.kh.spring.memo.model.dao.MemoDao
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:52 - 메소드명 : selectMemoList
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:69 - [Before] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:73 - [After] Dao :: selectMemoList
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:73 - [After] Service :: selectMemoList
+DEBUG:[2018-12-13 13:13:36] LoggerAspect.java:73 - [After] Controller :: memo
+INFO :[2018-12-13 13:22:32] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 13:22:34] ContextLoader.java:306 - Root WebApplicationContext initialized in 1973 ms
+INFO :[2018-12-13 13:22:34] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+WARN :[2018-12-13 13:22:36] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: Pointcut is not well-formed: expecting ')' at character position 0
+execution(* com.kh.spring..*Controller.*(..)
+^
+
+ERROR:[2018-12-13 13:22:36] FrameworkServlet.java:533 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: Pointcut is not well-formed: expecting ')' at character position 0
+execution(* com.kh.spring..*Controller.*(..)
+^
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: Pointcut is not well-formed: expecting ')' at character position 0
+execution(* com.kh.spring..*Controller.*(..)
+^
+
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:334)
+	at org.aspectj.weaver.reflect.InternalUseOnlyPointcutParser.resolvePointcutExpression(InternalUseOnlyPointcutParser.java:36)
+	at org.aspectj.weaver.reflect.Java15ReflectionBasedReferenceTypeDelegate.getDeclaredPointcuts(Java15ReflectionBasedReferenceTypeDelegate.java:309)
+	at org.aspectj.weaver.ReferenceType.getDeclaredPointcuts(ReferenceType.java:884)
+	at org.aspectj.weaver.ResolvedType$PointcutGetter.get(ResolvedType.java:243)
+	at org.aspectj.weaver.ResolvedType$PointcutGetter.get(ResolvedType.java:241)
+	at org.aspectj.weaver.Iterators$4$1.hasNext(Iterators.java:213)
+	at org.aspectj.weaver.Iterators$4.hasNext(Iterators.java:230)
+	at org.aspectj.weaver.ResolvedType.findPointcut(ResolvedType.java:743)
+	at org.aspectj.weaver.patterns.ReferencePointcut.resolveBindings(ReferencePointcut.java:148)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 27 more
+INFO :[2018-12-13 13:22:59] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 13:23:01] ContextLoader.java:306 - Root WebApplicationContext initialized in 1882 ms
+INFO :[2018-12-13 13:23:01] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+WARN :[2018-12-13 13:23:03] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 can't find referenced pointcut myPoint
+ERROR:[2018-12-13 13:23:03] FrameworkServlet.java:533 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 can't find referenced pointcut myPoint
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: error at ::0 can't find referenced pointcut myPoint
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 27 more
+INFO :[2018-12-13 13:24:41] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 13:24:43] ContextLoader.java:306 - Root WebApplicationContext initialized in 1890 ms
+INFO :[2018-12-13 13:24:43] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 13:24:47] FrameworkServlet.java:546 - Completed initialization in 3417 ms
+DEBUG:[2018-12-13 13:24:55] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:24:57] AroundAdvice.java:34 - memo() 소요시간 : 1554(ms)초
+DEBUG:[2018-12-13 13:25:00] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:25:00] AroundAdvice.java:34 - memo() 소요시간 : 18(ms)초
+DEBUG:[2018-12-13 13:25:02] MemoController.java:39 - 메모 저장
+DEBUG:[2018-12-13 13:25:02] AroundAdvice.java:34 - insertMemo() 소요시간 : 13(ms)초
+DEBUG:[2018-12-13 13:25:02] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:25:02] AroundAdvice.java:34 - memo() 소요시간 : 18(ms)초
+DEBUG:[2018-12-13 13:25:05] MemoController.java:53 - 메모 삭제
+DEBUG:[2018-12-13 13:25:05] AroundAdvice.java:34 - deleteMemo() 소요시간 : 3(ms)초
+DEBUG:[2018-12-13 13:25:05] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:25:05] AroundAdvice.java:34 - memo() 소요시간 : 6(ms)초
+INFO :[2018-12-13 13:34:24] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-13 13:34:26] ContextLoader.java:306 - Root WebApplicationContext initialized in 1908 ms
+INFO :[2018-12-13 13:34:26] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-13 13:34:30] FrameworkServlet.java:546 - Completed initialization in 3665 ms
+DEBUG:[2018-12-13 13:34:35] MemoController.java:28 - 메모페이지 요청
+DEBUG:[2018-12-13 13:34:36] AroundAdvice.java:34 - memo() 소요시간 : 1422(ms)초

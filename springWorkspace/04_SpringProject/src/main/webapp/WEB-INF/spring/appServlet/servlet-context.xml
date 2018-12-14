@@ -61,10 +61,21 @@
 		<interceptor>
 			<mapping path="/member/memberView.do"/>
 			<mapping path="/member/memberUpdate.do"/>
+			<mapping path="/board/**/*.do"/>
+			<!-- 스프링 3.2버전 부터 exclude라는 태그가 도입되어
+				특정 url 경로를 등록하여 제외 시킬 수 있게 되었다. -->
+			<exclude-mapping path="/board/boardList.do"/>
 			<beans:bean id="loginCheckInterceptor"
 					class="com.kh.spring.common.interceptor.LogincheckInterceptor"></beans:bean>
 		</interceptor>
 	</interceptors>		
+	
+	<!-- 파일 업로드 시에 사용할 MultipartResolver등록하기  -->
+	<beans:bean id="multipartResolver" 
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10485760"/> <!-- 10MB -->
+		
+	</beans:bean>
 	
 	<context:component-scan base-package="com.kh.spring" />
 	
