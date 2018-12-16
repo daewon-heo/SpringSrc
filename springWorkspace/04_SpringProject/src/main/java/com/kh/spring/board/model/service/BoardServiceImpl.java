@@ -91,15 +91,15 @@ public class BoardServiceImpl implements BoardService {
 			boardNo = board.getBoardNo(); //boardNo를 리턴함.
 			logger.debug("boardNo="+boardNo);
 			
-			List<Attachment> origniAttachlist = boardDao.selectAttachmentList(board.getBoardNo());
-			
-			attachList.get(0).setAttachmentNo(origniAttachlist.get(0).getAttachmentNo());
-			attachList.get(1).setAttachmentNo(origniAttachlist.get(1).getAttachmentNo());
-			
 			//현재 Attachment객체의 boardNo는 값이 없다. 
 			//1. 가져온 boardNo를 대입하던지
 			//2. mapper의 insert문에서 selectKey를 사용함
 			if(attachList.size()>0){
+				List<Attachment> origniAttachlist = boardDao.selectAttachmentList(board.getBoardNo());
+				
+				attachList.get(0).setAttachmentNo(origniAttachlist.get(0).getAttachmentNo());
+				attachList.get(1).setAttachmentNo(origniAttachlist.get(1).getAttachmentNo());
+				
 				for(Attachment a : attachList){
 					// a.setBoardNo(boardNo); //게시물번호 대입
 					result = boardDao.updateAttachment(a);
