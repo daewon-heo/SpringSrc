@@ -147,7 +147,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/board/boardUpdate.do")
-	public String updateBoard(@RequestParam int boardNo, Board board, Model model, HttpSession session, 
+	public String updateBoard(Board board, Model model, HttpSession session, 
 			@RequestParam(value="upFile", required=false) MultipartFile[] upFile) {
 		
 		System.out.println("보드 : " + board);
@@ -194,7 +194,6 @@ public class BoardController {
 		int result;
 		
 		try {
-			board.setBoardNo(boardNo);
 			result = boardService.updateBoard(board, attachList);
 		}catch (Exception e) {
 			throw new BoardException("게시글 수정 오류!!");

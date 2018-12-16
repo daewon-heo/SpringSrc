@@ -61,4 +61,10 @@ public class BoardDaoImpl implements BoardDao {
 		return sqlSession.delete("board.deleteBoard", boardNo);
 	}
 
+	@Override
+	public int updateAttachment(Attachment a) {
+		System.out.println("첨부파일 : " + a);
+		return sqlSession.insert("board.updateAttachment",a);
+	}
+
 }

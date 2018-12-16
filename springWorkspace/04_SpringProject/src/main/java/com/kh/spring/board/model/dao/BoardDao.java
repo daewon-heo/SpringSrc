@@ -24,4 +24,6 @@ public interface BoardDao {
 
 	int deleteBoard(int boardNo);
 
+	int updateAttachment(Attachment a);
+
 }
