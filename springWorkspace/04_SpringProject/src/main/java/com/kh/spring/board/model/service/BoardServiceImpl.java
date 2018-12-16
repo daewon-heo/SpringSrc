@@ -77,4 +77,40 @@ public class BoardServiceImpl implements BoardService {
 		return boardDao.selectAttachmentList(boardNo);
 	}
 
+	@Override
+	public int updateBoard(Board board, List<Attachment> attachList) {
+		System.out.println("boardservice : 리스트 " + attachList);
+		int result = 0;
+		int boardNo = 0;
+		
+		try{
+			result = boardDao.updateBoard(board);
+			if(result==0) throw new BoardException();
+			
+			boardNo = board.getBoardNo(); //boardNo를 리턴함.
+			logger.debug("boardNo="+boardNo);
+			
+			//현재 Attachment객체의 boardNo는 값이 없다. 
+			//1. 가져온 boardNo를 대입하던지
+			//2. mapper의 insert문에서 selectKey를 사용함
+			if(attachList.size()>0){
+				for(Attachment a : attachList){
+					// a.setBoardNo(boardNo); //게시물번호 대입
+					result = boardDao.insertAttachment(a);
+					if(result==0) throw new BoardException();
+				}
+			}
+		} catch(Exception e){
+			logger.debug("게시물등록 에러");
+//			throw new BoardException("게시물등록오류");
+			throw e;
+		}
+		return result;
+	}
+
+	@Override
+	public int deleteBoard(int boardNo) {
+		return boardDao.deleteBoard(boardNo);
+	}
+
 }

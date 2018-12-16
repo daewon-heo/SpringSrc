@@ -81,6 +81,7 @@
 				</div>
 			    <textarea class="form-control" name="boardContent" placeholder="내용" required>${board.boardContent}</textarea>
 				<br />
+				<input type="hidden" name="boardNo" value="${board.boardNo}" />
 				<input type="submit" class="btn btn-outline-success" value="수정 완료" /> &nbsp;
 				<input type="button" class="btn btn-outline-danger" value="삭제" onclick="location.href='${pageContext.request.contextPath}/board/boardDelete.do?boardNo=${board.boardNo}'"/>
 			</form>

@@ -20,4 +20,8 @@ public interface BoardDao {
 
 	List<Attachment> selectAttachmentList(int boardNo);
 
+	int updateBoard(Board board);
+
+	int deleteBoard(int boardNo);
+
 }

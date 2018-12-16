@@ -18,4 +18,8 @@ public interface BoardService {
 
 	List<Attachment> selectAttachmentList(int boardNo);
 
+	int updateBoard(Board board, List<Attachment> attachList);
+
+	int deleteBoard(int boardNo);
+
 }
