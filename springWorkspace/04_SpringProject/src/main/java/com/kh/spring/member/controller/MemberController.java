@@ -5,6 +5,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -17,14 +19,16 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kh.spring.common.log4j.TestLog4jClass;
 import com.kh.spring.member.model.service.MemberService;
 import com.kh.spring.member.model.vo.Member;
 
 @SessionAttributes("member")
 @Controller
 public class MemberController {
+	
+	// 로그를 남길 수 있는 로거 객체 선언
+	private Logger logger = LoggerFactory.getLogger(MemberController.class);
 	
 	@Autowired
 	MemberService memberService;
@@ -39,14 +43,14 @@ public class MemberController {
 	
 	@RequestMapping("/member/memberEnroll.do")
 	public String memberEnroll() {
-		
+		if(logger.isDebugEnabled()) logger.debug("회원 등록 페이지 이동 확인!");
 		return "member/memberEnroll";
 		
 	}
 	
 	@RequestMapping("/member/memberEnrollEnd.do")
 	public String memberEnrollEnd(Member member, Model model) {
-		
+		if(logger.isDebugEnabled()) logger.debug("회원 등록 처리 메소드 실행 확인");
 		// 원래 비밀번호
 		String rawPassword = member.getPassword();
 		System.out.println("비밀번호 암호화 전 : " + rawPassword);
@@ -151,6 +155,8 @@ public class MemberController {
 			method= RequestMethod.POST)
 	public ModelAndView memberLogin(@RequestParam String userId,
 								@RequestParam String password) {
+		if(logger.isDebugEnabled()) logger.debug("회원 로그인 기능 확인!");
+		
 		ModelAndView mv = new ModelAndView(); 
 		
 		Member m = memberService.selectOne(userId);
@@ -188,6 +194,8 @@ public class MemberController {
 	public String memberLogout(SessionStatus sessionStatus, 
 			HttpSession session, Model model) {
 		
+		if(logger.isDebugEnabled()) logger.debug("회원 로그아웃 확인");
+		
 		// 현재 세션의 상태를 완료됨으로 처리함으로써 세션을 종료시키는 방법
 		if(!sessionStatus.isComplete()) sessionStatus.setComplete();
 		
@@ -206,11 +214,15 @@ public class MemberController {
 	@RequestMapping("/member/memberView.do")
 	public String memberView(@RequestParam String userId) {
 		
+		if(logger.isDebugEnabled()) logger.debug("회원가입 뷰 확인");
+		
 		return "member/memberView";
 	}
 	
 	@RequestMapping("/member/memberUpdate.do")
 	public ModelAndView memberUpdate(Member m) {
+		
+		if(logger.isDebugEnabled()) logger.debug("회원정보 수정 확인");
 		
 		ModelAndView mv = new ModelAndView();
 		
@@ -236,6 +248,8 @@ public class MemberController {
 	@RequestMapping("/member/memberDelete.do")
 	public String memberDelete(SessionStatus sessionStatus,
 			Member m, Model model) {
+		
+		if(logger.isDebugEnabled()) logger.debug("회원정보 삭제 확인");
 		
 		int result = memberService.deleteMember(m.getUserId());
 		
@@ -311,6 +325,8 @@ public class MemberController {
 	@RequestMapping("/member/checkIdDuplicate.do")
 	@ResponseBody
 	public Map<String, Object> checkIdDuplicate(@RequestParam String userId){
+		if(logger.isDebugEnabled()) logger.debug("아이디 중복 확인!");
+		
 		Map<String, Object> map = new HashMap<>();
 		boolean isUsable = memberService.checkIdDuplicate(userId) == 0 
 				? true : false;

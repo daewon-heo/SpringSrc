@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="memo">
+	
+	<select id="selectMemoList" resultType="Memo">
+		select * from memo order by memono desc
+	</select>
+	
+	<insert id="insertMemo">
+		insert into memo values(seq_memono.nextval, #{memo}, #{password}, default)
+	</insert>
+	
+	<delete id="deleteMemo">
+  		delete from memo where memono = #{no} and password = #{password}
+ 	</delete>
+</mapper>

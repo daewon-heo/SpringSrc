@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="board">
+	<resultMap type="map" id="board"/>
+	<resultMap type="Attachment" id="attachment"/>
+	
+	<!-- <select id="selectBoardList" resultMap="map"> -->
+	<!-- vo를 사용하는 경우 -->
+	<select id="selectBoardList" resultType="board">
+		SELECT A.*, (SELECT COUNT(*) FROM ATTACHMENT WHERE BOARDNO = A.BOARDNO) FILECOUNT
+		FROM BOARD A 
+		ORDER BY BOARDDATE DESC, BOARDNO DESC
+	</select>
+	<select id="selectBoardTotalContents" resultType="_int">
+		SELECT COUNT(*) FROM BOARD
+	</select>
+	<select id="selectOneBoard" parameterType="_int" resultType="Board">
+		SELECT * FROM BOARD WHERE BOARDNO = #{boardNo}
+	</select>
+	<insert id="insertBoard">
+		INSERT INTO BOARD(BOARDNO, BOARDTITLE, BOARDWRITER, BOARDCONTENT) 
+		VALUES (SEQ_BOARDNO.NEXTVAL,#{boardTitle},#{boardWriter},#{boardContent})
+		<!-- 전달한 board객체의 boardNo 프로퍼티에 결과값을 담는다. -->
+		<selectKey keyProperty="boardNo" resultType="_int" order="AFTER"> 
+			SELECT SEQ_BOARDNO.CURRVAL FROM DUAL 
+		</selectKey>
+	</insert>
+	<insert id="insertAttachment">
+		<!-- 다른방식 -->
+		<selectKey keyProperty="boardNo" resultType="_int" order="BEFORE"> 
+			SELECT SEQ_BOARDNO.CURRVAL FROM DUAL 
+		</selectKey>
+		INSERT INTO ATTACHMENT(ATTACHMENTNO, BOARDNO, ORIGINALFILENAME, RENAMEDFILENAME)
+		VALUES (SEQ_ATTACHMENTNO.NEXTVAL, #{boardNo}, #{originalFileName}, #{renamedFileName})
+	</insert>
+	
+	<select id="selectAttachmentList" parameterType="_int" resultMap="attachment">
+		SELECT * FROM ATTACHMENT WHERE BOARDNO = #{boardNo}
+	</select>
+	
+	<update id="updateBoard" parameterType="Board">
+		UPDATE BOARD 
+		SET BOARDTITLE = #{boardTitle}, BOARDCONTENT = #{boardContent}
+		WHERE BOARDNO = #{boardNo}
+	</update>
+	
+	<update id="updateAttachment" parameterType="Attachment">
+		UPDATE ATTACHMENT 
+		SET ORIGINALFILENAME = #{originalFileName}, RENAMEDFILENAME = #{renamedFileName}
+		WHERE ATTACHMENTNO = #{attachmentNo}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="_int">
+		DELETE FROM BOARD WHERE BOARDNO = #{boardNo}
+	</delete>
+	
+	<delete id="deleteAttachment" parameterType="_int">
+		DELETE FROM ATTACHMENT WHERE BOARDNO = #{boardNo}
+	</delete>
+	
+</mapper>

@@ -9,6 +9,8 @@
 		<typeAlias type="com.kh.spring.member.model.vo.Member" alias="Member"/>
 		<typeAlias type="com.kh.spring.common.StringArrayTypeHandler"
 			alias="strArrTypeHandler"/>
+		<typeAlias type="com.kh.spring.board.model.vo.Board" alias="Board"/>
+		<typeAlias type="com.kh.spring.board.model.vo.Attachment" alias="Attachment"/>
 	</typeAliases>
 	
 	<!-- 문자열 배열을 일반 문자열로 변환하는 타입 핸들러 등록 -->

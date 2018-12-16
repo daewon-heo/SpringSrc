@@ -1,18 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
-
+<!-- log4j 구조 -->
+ 
+ 	<!-- log4jdbc-remix Appender -->
+ 	<appender name="sqlLogger" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %m%n"/>
+		</layout>
+	</appender>
+	
+	 <!--  log4jdbc-remix 관련 logger 시작  -->
+	 <!--  Query Loggers   -->
+	<logger name="jdbc.sqlonly" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="sqlLogger"/>
+	</logger>
+	
+	<logger name="jdbc.resultsettable" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="sqlLogger"/>
+	</logger>
+	
 	<!-- Appenders -->
 	<appender name="console" class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+			<!-- <param name="ConversionPattern" value="%-5p: %c - %m%n" /> -->
+			<!-- <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] %-5p [%l] - %m%n"/> -->
+			<param name="ConversionPattern" value="%-5p : %L - %m%n" />
 		</layout>
 	</appender>
 	
+	<appender name="fileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="C:/Users/user1/Documents/GitHub/SpringSrc/springWorkspace/04_SpringProject/src/main/resources/logs/system/system.log"/>
+		<param name="Append" value="true"/>
+		<param name="datePattern" value=".yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p:[%d{yyyy-MM-dd HH:mm:ss}] %F:%L - %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="loginAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" 
+			value="C:/Users/user1/Documents/GitHub/SpringSrc/springWorkspace/04_SpringProject/src/main/resources/logs/login/log.log"/>
+		<param name="Append" value="true"/>
+		<param name="datePattern" value=".yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" 
+			value="%-5p:[%d{yyyy-MM-dd HH:mm:ss}] %m%n"/>
+		</layout>
+	</appender>
+	
+	<logger name="com.kh.spring.common.aop.AfterReturningLoginLogger" 
+		additivity="true">
+		<level value="info"/>
+		<appender-ref ref="loginAppender"/>
+	</logger>
+	
 	<!-- Application Loggers -->
 	<logger name="com.kh.spring">
-		<level value="info" />
+		<level value="debug" />
+	</logger>
+	
+	<!-- 테스트용 Logger 설정 -->
+	<!-- 로그 실행 시 가장 구체적으로 작성된 로그 객체부터 실행되며,
+		 additivity 속성 참/거짓 여부에 따라 발생할 수도 있다.
+		 그리고 먼저 실행된 로그 설정을 따르기 때문에, 부모 로그 또한 해당 설정을 따른다.
+	-->
+	<!-- <logger name="com.kh.spring.common.log4j.TestLog4jClass" additivity="false">
+		<level value="trace"/>
+		<appender-ref ref="console"/>
+	</logger> -->
+	
+	<logger name="com.kh.spring.member.controller.MemberController" additivity="false">
+		<level value="trace"/>
+		<appender-ref ref="console"/>
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
@@ -33,9 +96,11 @@
 	</logger>
 
 	<!-- Root Logger -->
+	<!-- 모든 자식 logger들의 출력 형태를 등록해서 사용하는 로거 -->
 	<root>
 		<priority value="warn" />
 		<appender-ref ref="console" />
+		<appender-ref ref="fileAppender" />
 	</root>
 	
 </log4j:configuration>
