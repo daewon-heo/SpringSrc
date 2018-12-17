@@ -1,42 +1,61 @@
-INFO :[2018-12-14 09:33:07] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:33:09] ContextLoader.java:306 - Root WebApplicationContext initialized in 2132 ms
-INFO :[2018-12-14 09:33:09] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 09:33:12] FrameworkServlet.java:546 - Completed initialization in 2680 ms
-DEBUG:[2018-12-14 09:33:44] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:33:44] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 09:33:44] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:33:46] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:33:46] LoggerInterceptor.java:44 - =================== END =====================
+INFO :[2018-12-17 08:54:28] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-17 08:54:32] ContextLoader.java:306 - Root WebApplicationContext initialized in 3617 ms
+INFO :[2018-12-17 08:54:32] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-17 08:54:37] FrameworkServlet.java:546 - Completed initialization in 4585 ms
+DEBUG:[2018-12-17 08:54:49] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:54:49] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
+DEBUG:[2018-12-17 08:54:49] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 08:54:52] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:54:52] LoggerInterceptor.java:44 - =================== END =====================
 
-DEBUG:[2018-12-14 09:33:52] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:33:52] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 09:33:52] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:33:52] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:33:52] LoggerInterceptor.java:44 - =================== END =====================
+DEBUG:[2018-12-17 08:54:57] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:54:57] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
+DEBUG:[2018-12-17 08:54:57] LoggerInterceptor.java:27 - -----------------------------------------------
+INFO :[2018-12-17 08:54:57] AfterReturningLoginLogger.java:41 - [test] 님이 로그인 하였습니다.
+DEBUG:[2018-12-17 08:54:57] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:54:57] LoggerInterceptor.java:44 - =================== END =====================
 
-INFO :[2018-12-14 09:40:06] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:40:08] ContextLoader.java:306 - Root WebApplicationContext initialized in 2090 ms
-INFO :[2018-12-14 09:40:08] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 09:40:11] FrameworkServlet.java:546 - Completed initialization in 2789 ms
-DEBUG:[2018-12-14 09:40:16] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:40:16] LoggerInterceptor.java:26 - /spring/member/memberLogout.do
-DEBUG:[2018-12-14 09:40:16] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:40:16] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:40:16] LoggerInterceptor.java:44 - =================== END =====================
+DEBUG:[2018-12-17 08:55:26] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:55:26] LoggerInterceptor.java:26 - /spring/board/boardList.do
+DEBUG:[2018-12-17 08:55:26] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 08:55:26] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:55:26] LoggerInterceptor.java:44 - =================== END =====================
 
-DEBUG:[2018-12-14 09:40:23] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:40:23] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 09:40:23] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:40:25] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:40:25] LoggerInterceptor.java:44 - =================== END =====================
+DEBUG:[2018-12-17 08:55:31] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:55:31] LoggerInterceptor.java:26 - /spring/board/boardForm.do
+DEBUG:[2018-12-17 08:55:31] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 08:55:31] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:55:32] LoggerInterceptor.java:44 - =================== END =====================
 
-INFO :[2018-12-14 09:45:02] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:45:05] ContextLoader.java:306 - Root WebApplicationContext initialized in 2212 ms
-INFO :[2018-12-14 09:45:05] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-WARN :[2018-12-14 09:45:06] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/weaver/reflect/ReflectionWorld$ReflectionWorldException
-ERROR:[2018-12-14 09:45:06] FrameworkServlet.java:533 - Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/weaver/reflect/ReflectionWorld$ReflectionWorldException
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:493)
+DEBUG:[2018-12-17 08:56:03] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:56:03] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
+DEBUG:[2018-12-17 08:56:03] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 08:56:03] BoardServiceImpl.java:50 - boardNo=362
+DEBUG:[2018-12-17 08:56:03] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:56:03] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 08:56:07] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:56:07] LoggerInterceptor.java:26 - /spring/board/boardList.do
+DEBUG:[2018-12-17 08:56:07] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 08:56:07] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:56:07] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 08:56:09] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 08:56:09] LoggerInterceptor.java:26 - /spring/board/boardView.do
+DEBUG:[2018-12-17 08:56:09] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 08:56:09] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 08:56:09] LoggerInterceptor.java:44 - =================== END =====================
+
+WARN :[2018-12-17 08:56:15] DispatcherServlet.java:1248 - No mapping for GET /spring/board/fileDownload.do
+WARN :[2018-12-17 08:56:17] DispatcherServlet.java:1248 - No mapping for GET /spring/board/boardUpdateView.do
+WARN :[2018-12-17 08:56:21] DispatcherServlet.java:1248 - No mapping for GET /spring/board/boardUpdateView.do
+INFO :[2018-12-17 08:56:48] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+WARN :[2018-12-17 08:56:51] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+ERROR:[2018-12-17 08:56:51] ContextLoader.java:312 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
@@ -44,18 +63,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
-	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
-	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4792)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5256)
 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
@@ -63,29 +75,33 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.NoClassDefFoundError: org/aspectj/weaver/reflect/ReflectionWorld$ReflectionWorldException
-	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getPointcut(ReflectiveAspectJAdvisorFactory.java:210)
-	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisor(ReflectiveAspectJAdvisorFactory.java:192)
-	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.getAdvisors(ReflectiveAspectJAdvisorFactory.java:126)
-	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectJAdvisorsBuilder.buildAspectJAdvisors(BeanFactoryAspectJAdvisorsBuilder.java:110)
-	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:95)
-	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1091)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1064)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:487)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:500)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 21 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:494)
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:171)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:109)
 	... 26 more
-Caused by: java.lang.ClassNotFoundException: org.aspectj.weaver.reflect.ReflectionWorld$ReflectionWorldException
-	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1309)
-	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
-	... 36 more
-INFO :[2018-12-14 09:46:09] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:46:12] ContextLoader.java:306 - Root WebApplicationContext initialized in 2198 ms
-INFO :[2018-12-14 09:46:12] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-WARN :[2018-12-14 09:46:14] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-ERROR:[2018-12-14 09:46:14] FrameworkServlet.java:533 - Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:164)
+	... 27 more
+INFO :[2018-12-17 09:41:47] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+WARN :[2018-12-17 09:41:49] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+ERROR:[2018-12-17 09:41:49] ContextLoader.java:312 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
@@ -94,18 +110,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
-	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
-	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4792)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5256)
 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
@@ -113,30 +122,33 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
-	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:500)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 21 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:494)
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:171)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:109)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:164)
 	... 27 more
-INFO :[2018-12-14 09:47:08] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:47:10] ContextLoader.java:306 - Root WebApplicationContext initialized in 2101 ms
-INFO :[2018-12-14 09:47:10] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-WARN :[2018-12-14 09:47:12] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-ERROR:[2018-12-14 09:47:12] FrameworkServlet.java:533 - Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+INFO :[2018-12-17 09:42:15] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+WARN :[2018-12-17 09:42:17] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+ERROR:[2018-12-17 09:42:17] ContextLoader.java:312 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
@@ -145,18 +157,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
-	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
-	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4792)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5256)
 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
@@ -164,30 +169,33 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
-	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:500)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 21 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:494)
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:171)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:109)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:164)
 	... 27 more
-INFO :[2018-12-14 09:48:17] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:48:19] ContextLoader.java:306 - Root WebApplicationContext initialized in 2107 ms
-INFO :[2018-12-14 09:48:19] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-WARN :[2018-12-14 09:48:21] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-ERROR:[2018-12-14 09:48:21] FrameworkServlet.java:533 - Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+INFO :[2018-12-17 09:42:55] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+WARN :[2018-12-17 09:42:58] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+ERROR:[2018-12-17 09:42:58] ContextLoader.java:312 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
@@ -196,18 +204,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
-	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
-	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4792)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5256)
 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
@@ -215,30 +216,33 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
-	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:500)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 21 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:494)
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:171)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:109)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:164)
 	... 27 more
-INFO :[2018-12-14 09:51:37] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:51:39] ContextLoader.java:306 - Root WebApplicationContext initialized in 2127 ms
-INFO :[2018-12-14 09:51:40] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-WARN :[2018-12-14 09:51:41] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-ERROR:[2018-12-14 09:51:41] FrameworkServlet.java:533 - Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcContentNegotiationManager': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+INFO :[2018-12-17 09:44:01] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+WARN :[2018-12-17 09:44:04] AbstractApplicationContext.java:554 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+ERROR:[2018-12-17 09:44:04] ContextLoader.java:312 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactoryBean' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
@@ -247,18 +251,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:827)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:701)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:667)
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:715)
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:529)
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:169)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1144)
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1091)
-	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:983)
-	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4978)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5290)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4792)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5256)
 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1420)
 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1410)
@@ -266,706 +263,89 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.kh.spring.MemberController [Xlint:invalidAbsoluteTypeName]
-	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
-	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
-	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
-	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
-	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:349)
-	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:301)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1749)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:500)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 21 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:494)
+	... 24 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Dev'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:171)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:109)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kh.spring.dev.model.vo.Dev
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:164)
 	... 27 more
-INFO :[2018-12-14 09:53:17] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:53:19] ContextLoader.java:306 - Root WebApplicationContext initialized in 2092 ms
-INFO :[2018-12-14 09:53:19] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 09:53:23] FrameworkServlet.java:546 - Completed initialization in 3613 ms
-DEBUG:[2018-12-14 09:53:30] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:53:30] LoggerInterceptor.java:26 - /spring/member/memberLogout.do
-DEBUG:[2018-12-14 09:53:30] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:53:30] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:53:30] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 09:53:35] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:53:35] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 09:53:35] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:53:37] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:53:37] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 09:55:32] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:55:34] ContextLoader.java:306 - Root WebApplicationContext initialized in 2123 ms
-INFO :[2018-12-14 09:55:34] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 09:55:38] FrameworkServlet.java:546 - Completed initialization in 4230 ms
-DEBUG:[2018-12-14 09:55:44] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:55:44] LoggerInterceptor.java:26 - /spring/member/memberLogout.do
-DEBUG:[2018-12-14 09:55:44] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:55:44] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:55:45] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 09:55:50] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:55:50] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 09:55:50] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:55:51] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:55:51] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 09:56:57] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 09:56:59] ContextLoader.java:306 - Root WebApplicationContext initialized in 2140 ms
-INFO :[2018-12-14 09:56:59] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 09:57:04] FrameworkServlet.java:546 - Completed initialization in 4305 ms
-DEBUG:[2018-12-14 09:57:08] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:57:08] LoggerInterceptor.java:26 - /spring/member/memberLogout.do
-DEBUG:[2018-12-14 09:57:08] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 09:57:08] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:57:08] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 09:57:13] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 09:57:13] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 09:57:13] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-14 09:57:15] AfterReturningLoginLogger.java:40 - [test] 님이 로그인 하였습니다.
-DEBUG:[2018-12-14 09:57:15] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 09:57:15] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 10:32:14] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 10:32:16] ContextLoader.java:306 - Root WebApplicationContext initialized in 2255 ms
-INFO :[2018-12-14 10:32:16] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 10:32:21] FrameworkServlet.java:546 - Completed initialization in 4253 ms
-DEBUG:[2018-12-14 10:32:30] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:30] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:30] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:32] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:34] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:37] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:37] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:37] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:37] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:37] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:39] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:39] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:39] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:39] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:39] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:40] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:40] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:40] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:40] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:40] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:42] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:42] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:42] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:42] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:42] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:43] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:43] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:43] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:43] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:43] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:44] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:44] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:44] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:44] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:44] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:46] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:46] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:46] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:46] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:46] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:47] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:47] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:47] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:47] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:47] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:49] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:49] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:49] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:49] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:49] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:50] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:50] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:50] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:50] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:50] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:57] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:57] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:57] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:57] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:57] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:32:58] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:32:58] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:32:58] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:32:58] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:32:58] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:33:47] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:33:47] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:33:47] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:33:47] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:33:47] LoggerInterceptor.java:44 - =================== END =====================
-
-WARN :[2018-12-14 10:33:49] DispatcherServlet.java:1248 - No mapping for GET /spring/board/boardView.do
-DEBUG:[2018-12-14 10:35:23] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:23] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:23] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:23] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:23] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:25] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:25] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:25] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:25] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:26] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:27] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:27] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:27] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:27] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:27] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:28] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:28] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:28] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:28] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:28] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:30] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:30] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:30] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:30] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:30] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:32] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:32] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:32] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:32] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:32] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:36] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:36] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:36] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:36] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:36] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:38] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:38] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:38] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:38] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:38] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:39] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:39] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:39] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:39] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:39] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:40] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:40] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:40] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:40] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:40] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:35:55] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:35:55] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:35:55] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:35:55] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:35:55] LoggerInterceptor.java:44 - =================== END =====================
-
-WARN :[2018-12-14 10:36:52] DispatcherServlet.java:1248 - No mapping for GET /spring/board/boardForm.do
-INFO :[2018-12-14 10:38:05] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 10:38:08] ContextLoader.java:306 - Root WebApplicationContext initialized in 2225 ms
-INFO :[2018-12-14 10:38:08] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 10:38:12] FrameworkServlet.java:546 - Completed initialization in 4113 ms
-DEBUG:[2018-12-14 10:38:14] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:38:14] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 10:38:14] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:38:14] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:38:15] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 10:40:36] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 10:40:39] ContextLoader.java:306 - Root WebApplicationContext initialized in 2076 ms
-INFO :[2018-12-14 10:40:39] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 10:40:43] FrameworkServlet.java:546 - Completed initialization in 4040 ms
-DEBUG:[2018-12-14 10:40:59] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:40:59] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 10:40:59] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:40:59] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:40:59] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 10:44:57] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 10:44:59] ContextLoader.java:306 - Root WebApplicationContext initialized in 2289 ms
-INFO :[2018-12-14 10:44:59] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 10:45:03] FrameworkServlet.java:546 - Completed initialization in 4064 ms
-DEBUG:[2018-12-14 10:45:03] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:45:03] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 10:45:03] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-14 10:45:03] LogincheckInterceptor.java:28 - 비로그인 상태에서 [/spring/board/boardForm.do]로 접근하였습니다!
-DEBUG:[2018-12-14 10:45:04] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:45:07] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:45:07] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:45:07] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:45:09] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:45:09] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:45:09] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:45:09] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 10:45:09] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-14 10:45:09] LogincheckInterceptor.java:28 - 비로그인 상태에서 [/spring/board/boardForm.do]로 접근하였습니다!
-DEBUG:[2018-12-14 10:45:09] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:45:14] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:45:14] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 10:45:14] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 10:45:14] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 10:45:14] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 10:45:17] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 10:45:17] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 10:45:17] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-14 10:45:17] LogincheckInterceptor.java:28 - 비로그인 상태에서 [/spring/board/boardForm.do]로 접근하였습니다!
-DEBUG:[2018-12-14 10:45:17] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 12:32:19] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 12:32:22] ContextLoader.java:306 - Root WebApplicationContext initialized in 3296 ms
-INFO :[2018-12-14 12:32:23] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 12:32:28] FrameworkServlet.java:546 - Completed initialization in 5333 ms
-DEBUG:[2018-12-14 12:32:35] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:32:35] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
-DEBUG:[2018-12-14 12:32:35] LoggerInterceptor.java:27 - -----------------------------------------------
-INFO :[2018-12-14 12:32:37] AfterReturningLoginLogger.java:41 - [test] 님이 로그인 하였습니다.
-DEBUG:[2018-12-14 12:32:37] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:32:37] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:32:41] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:32:42] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:32:42] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 12:32:42] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:32:42] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:32:42] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:32:54] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:32:54] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
-DEBUG:[2018-12-14 12:32:54] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:32:54] BoardServiceImpl.java:49 - boardNo=356
-DEBUG:[2018-12-14 12:32:54] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:32:54] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:32:58] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:32:58] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:32:58] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:32:58] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:32:58] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:33:04] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:33:04] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:33:04] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:33:04] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:33:05] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:33:05] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:33:05] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:33:05] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:33:05] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:33:05] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:33:20] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:33:20] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:33:20] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:33:20] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:33:20] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:33:21] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:33:21] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:33:21] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:33:21] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:33:21] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:33:22] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:33:22] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:33:22] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:33:22] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:33:22] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:33:23] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:33:23] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:33:23] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:33:23] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:33:23] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 12:35:35] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 12:35:37] ContextLoader.java:306 - Root WebApplicationContext initialized in 2167 ms
-INFO :[2018-12-14 12:35:37] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 12:35:41] FrameworkServlet.java:546 - Completed initialization in 4170 ms
-DEBUG:[2018-12-14 12:35:48] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:35:48] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:35:48] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:35:49] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:35:50] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:35:52] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:35:52] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 12:35:52] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:35:52] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:35:52] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:35:57] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:35:57] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
-DEBUG:[2018-12-14 12:35:57] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:35:57] BoardServiceImpl.java:49 - boardNo=357
-ERROR:[2018-12-14 12:35:57] Slf4jSpyLogDelegator.java:120 - 4. PreparedStatement.execute() INSERT INTO ATTACHMENT(ATTACHMENTNO, BOARDNO, ORIGINALFILENAME, RENAMEDFILENAME)
-		VALUES (SEQ_ATTACHMENTNO.NEXTVAL, 357, '', '20181214_123557_669.')
-java.sql.SQLIntegrityConstraintViolationException: ORA-01400: cannot insert NULL into ("SPRING"."ATTACHMENT"."ORIGINALFILENAME")
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:208)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1046)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
-	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3714)
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1378)
-	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
-	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
-	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
-	at com.sun.proxy.$Proxy8.insert(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
-	at com.kh.spring.board.model.dao.BoardDaoImpl.insertAttachment(BoardDaoImpl.java:40)
-	at com.kh.spring.board.model.service.BoardServiceImpl.insertBoard(BoardServiceImpl.java:57)
-	at com.kh.spring.board.controller.BoardController.insertBoard(BoardController.java:111)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Unknown Source)
-ERROR:[2018-12-14 12:35:57] Slf4jSpyLogDelegator.java:139 - 4. PreparedStatement.execute() FAILED! INSERT INTO ATTACHMENT(ATTACHMENTNO, BOARDNO, ORIGINALFILENAME, RENAMEDFILENAME)
-		VALUES (SEQ_ATTACHMENTNO.NEXTVAL, 357, '', '20181214_123557_669.') {FAILED after 11 msec}
-java.sql.SQLIntegrityConstraintViolationException: ORA-01400: cannot insert NULL into ("SPRING"."ATTACHMENT"."ORIGINALFILENAME")
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:208)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1046)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
-	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3714)
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1378)
-	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
-	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
-	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
-	at com.sun.proxy.$Proxy8.insert(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
-	at com.kh.spring.board.model.dao.BoardDaoImpl.insertAttachment(BoardDaoImpl.java:40)
-	at com.kh.spring.board.model.service.BoardServiceImpl.insertBoard(BoardServiceImpl.java:57)
-	at com.kh.spring.board.controller.BoardController.insertBoard(BoardController.java:111)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Unknown Source)
-DEBUG:[2018-12-14 12:35:57] BoardServiceImpl.java:62 - 게시물등록 에러
-DEBUG:[2018-12-14 12:35:57] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:36:14] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:36:14] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:36:14] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:36:14] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:36:14] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:36:15] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:36:15] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 12:36:15] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:36:15] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:36:15] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:36:24] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:36:24] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
-DEBUG:[2018-12-14 12:36:24] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:36:24] BoardServiceImpl.java:49 - boardNo=358
-DEBUG:[2018-12-14 12:36:24] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:36:24] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:37:20] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:37:20] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:37:20] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:37:20] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:37:20] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:37:22] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:37:22] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:37:22] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:37:22] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:37:22] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 12:38:09] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 12:38:11] ContextLoader.java:306 - Root WebApplicationContext initialized in 2128 ms
-INFO :[2018-12-14 12:38:11] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 12:38:16] FrameworkServlet.java:546 - Completed initialization in 4279 ms
-DEBUG:[2018-12-14 12:38:20] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:38:20] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:38:20] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:38:22] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:38:22] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:38:23] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:38:23] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 12:38:23] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:38:23] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:38:23] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:38:30] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:38:30] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
-DEBUG:[2018-12-14 12:38:30] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:38:30] BoardServiceImpl.java:49 - boardNo=359
-DEBUG:[2018-12-14 12:38:30] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:38:30] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:38:33] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:38:33] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:38:33] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:38:33] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:38:33] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:38:35] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:38:35] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:38:35] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:38:35] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:38:35] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 12:39:42] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 12:39:44] ContextLoader.java:306 - Root WebApplicationContext initialized in 2243 ms
-INFO :[2018-12-14 12:39:45] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 12:39:49] FrameworkServlet.java:546 - Completed initialization in 4351 ms
-DEBUG:[2018-12-14 12:39:53] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:39:53] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:39:53] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:39:54] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:39:55] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:39:57] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:39:57] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:39:57] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:39:57] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:39:57] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:39:58] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:39:58] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 12:39:58] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:39:58] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:39:58] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:40:05] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:40:05] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
-DEBUG:[2018-12-14 12:40:05] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:40:05] BoardServiceImpl.java:50 - boardNo=360
-DEBUG:[2018-12-14 12:40:05] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:40:05] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:40:11] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:40:11] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:40:11] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:40:11] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:40:11] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:40:13] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:40:13] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:40:13] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:40:13] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:40:13] LoggerInterceptor.java:44 - =================== END =====================
-
-INFO :[2018-12-14 12:40:40] ContextLoader.java:270 - Root WebApplicationContext: initialization started
-INFO :[2018-12-14 12:40:42] ContextLoader.java:306 - Root WebApplicationContext initialized in 2080 ms
-INFO :[2018-12-14 12:40:42] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
-INFO :[2018-12-14 12:40:46] FrameworkServlet.java:546 - Completed initialization in 4250 ms
-DEBUG:[2018-12-14 12:40:52] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:40:52] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:40:52] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:40:54] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:40:54] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:40:57] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:40:57] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:40:57] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:40:57] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:40:57] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:40:58] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:40:58] LoggerInterceptor.java:26 - /spring/board/boardForm.do
-DEBUG:[2018-12-14 12:40:58] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:40:58] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:40:58] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:41:08] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:41:08] LoggerInterceptor.java:26 - /spring/board/boardFormEnd.do
-DEBUG:[2018-12-14 12:41:08] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:41:08] BoardServiceImpl.java:50 - boardNo=361
-DEBUG:[2018-12-14 12:41:08] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:41:08] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:41:11] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:41:11] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:41:11] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:41:11] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:41:11] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:41:13] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:41:13] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:41:13] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:41:13] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:41:13] LoggerInterceptor.java:44 - =================== END =====================
-
-WARN :[2018-12-14 12:41:14] DispatcherServlet.java:1248 - No mapping for GET /spring/board/fileDownload.do
-WARN :[2018-12-14 12:41:22] DispatcherServlet.java:1248 - No mapping for GET /spring/board/fileDownload.do
-DEBUG:[2018-12-14 12:41:25] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:41:25] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:41:25] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:41:25] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:41:25] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:41:26] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:41:26] LoggerInterceptor.java:26 - /spring/board/boardView.do
-DEBUG:[2018-12-14 12:41:26] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:41:27] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:41:27] LoggerInterceptor.java:44 - =================== END =====================
-
-DEBUG:[2018-12-14 12:42:26] LoggerInterceptor.java:25 - ==================== START ====================
-DEBUG:[2018-12-14 12:42:26] LoggerInterceptor.java:26 - /spring/board/boardList.do
-DEBUG:[2018-12-14 12:42:26] LoggerInterceptor.java:27 - -----------------------------------------------
-DEBUG:[2018-12-14 12:42:26] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
-DEBUG:[2018-12-14 12:42:26] LoggerInterceptor.java:44 - =================== END =====================
-
+INFO :[2018-12-17 10:00:21] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-17 10:00:25] ContextLoader.java:306 - Root WebApplicationContext initialized in 3611 ms
+INFO :[2018-12-17 10:00:25] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-17 10:00:30] FrameworkServlet.java:546 - Completed initialization in 4709 ms
+DEBUG:[2018-12-17 10:00:52] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:00:52] LoggerInterceptor.java:26 - /spring/member/memberLogin.do
+DEBUG:[2018-12-17 10:00:52] LoggerInterceptor.java:27 - -----------------------------------------------
+INFO :[2018-12-17 10:00:55] AfterReturningLoginLogger.java:41 - [test] 님이 로그인 하였습니다.
+DEBUG:[2018-12-17 10:00:55] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:00:55] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 10:01:03] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:01:03] LoggerInterceptor.java:26 - /spring/board/boardList.do
+DEBUG:[2018-12-17 10:01:03] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:01:03] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:01:03] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 10:01:06] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:01:06] LoggerInterceptor.java:26 - /spring/board/boardView.do
+DEBUG:[2018-12-17 10:01:06] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:01:06] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:01:06] LoggerInterceptor.java:44 - =================== END =====================
+
+WARN :[2018-12-17 10:01:08] DispatcherServlet.java:1248 - No mapping for GET /spring/board/fileDownload.do
+DEBUG:[2018-12-17 10:01:12] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:01:12] LoggerInterceptor.java:26 - /spring/board/boardUpdateView.do
+DEBUG:[2018-12-17 10:01:12] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:01:12] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:01:14] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 10:01:27] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:01:27] LoggerInterceptor.java:26 - /spring/board/boardUpdate.do
+DEBUG:[2018-12-17 10:01:27] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:01:27] BoardServiceImpl.java:92 - boardNo=362
+DEBUG:[2018-12-17 10:01:27] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:01:27] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 10:01:31] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:01:31] LoggerInterceptor.java:26 - /spring/board/boardList.do
+DEBUG:[2018-12-17 10:01:31] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:01:31] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:01:31] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 10:01:33] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:01:33] LoggerInterceptor.java:26 - /spring/board/boardView.do
+DEBUG:[2018-12-17 10:01:33] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:01:33] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:01:33] LoggerInterceptor.java:44 - =================== END =====================
+
+DEBUG:[2018-12-17 10:02:15] LoggerInterceptor.java:25 - ==================== START ====================
+DEBUG:[2018-12-17 10:02:15] LoggerInterceptor.java:26 - /spring/board/boardUpdateView.do
+DEBUG:[2018-12-17 10:02:15] LoggerInterceptor.java:27 - -----------------------------------------------
+DEBUG:[2018-12-17 10:02:15] LoggerInterceptor.java:36 - ------------------- VIEW ----------------------
+DEBUG:[2018-12-17 10:02:15] LoggerInterceptor.java:44 - =================== END =====================
+
+WARN :[2018-12-17 10:02:24] DispatcherServlet.java:1248 - No mapping for GET /spring/board/fileDownload.do
+WARN :[2018-12-17 10:03:26] DispatcherServlet.java:1248 - No mapping for GET /spring/board/fileDownload.do
+INFO :[2018-12-17 13:21:08] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-17 13:21:12] ContextLoader.java:306 - Root WebApplicationContext initialized in 3712 ms
+INFO :[2018-12-17 13:21:12] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-17 13:21:17] FrameworkServlet.java:546 - Completed initialization in 5175 ms
+INFO :[2018-12-17 13:24:19] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2018-12-17 13:24:23] ContextLoader.java:306 - Root WebApplicationContext initialized in 3685 ms
+INFO :[2018-12-17 13:24:23] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2018-12-17 13:24:28] FrameworkServlet.java:546 - Completed initialization in 5166 ms
