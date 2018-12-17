@@ -131,3 +131,5 @@ Insert into SPRING.BOARD (BOARDNO,BOARDTITLE,BOARDWRITER,BOARDCONTENT,BOARDDATE,
 
 select * from board;
 select * from member;
+
+commit;

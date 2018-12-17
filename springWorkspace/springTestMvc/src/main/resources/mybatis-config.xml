@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC
+"-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 마이바티스 설정과 관련된 태그 -->
+	<settings>
+		<!-- 만약에 Null 값이 들어온다면 DB에서도
+		    Null 이라고 받아라! -->
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.kh.spring.member.model.vo.Member"
+		         alias="Member"/>
+	</typeAliases>
+	
+</configuration>
+
+
+
+
+
+
+
+
+
+

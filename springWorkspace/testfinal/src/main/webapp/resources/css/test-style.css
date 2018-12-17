@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+.section-left{
+	background-color: blue;
+	float:left;
+	width : 80%;
+}
+
+.section-right{
+	background-color: red;
+	float: right;
+	width : 20%;
+}
